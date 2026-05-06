@@ -3,65 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JF5.0 Ecosystem | Post-Quantum Cryptography</title>
+    <title>JF5.0 Ecosystem | Post-Quantum Cryptography by Montree</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        :root { 
-            --primary: #58a6ff; 
-            --text: #ffffff; 
-        }
-        body { 
-            margin: 0; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            height: 100vh; 
-            font-family: -apple-system, sans-serif;
-            /* พื้นหลังเป็นรูปสายน้ำแบบสุ่ม (เปลี่ยนทุกครั้งที่โหลด) */
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('https://source.unsplash.com/featured/?nature,water,river,waterfall') no-repeat center center fixed;
-            background-size: cover;
-            overflow: hidden;
-        }
-        .box { 
-            /* กล่องแบบกระจกฝ้า (Glassmorphism) */
-            background: rgba(22, 27, 34, 0.8); 
-            backdrop-filter: blur(10px);
-            padding: 60px; 
-            border-radius: 24px; 
-            text-align: center; 
-            box-shadow: 0 30px 60px rgba(0,0,0,0.4); 
-            border: 1px solid rgba(255,255,255,0.1);
-            border-top: 5px solid var(--primary); 
-            max-width: 500px; 
-        }
-        h1 { color: var(--primary); font-size: 2.8rem; margin: 0; letter-spacing: 5px; font-weight: 800; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
-        .sub-title { color: #d1d5da; font-size: 1.1rem; margin: 15px 0 40px 0; letter-spacing: 1px; font-weight: 300; }
-        .status-box { background: rgba(0,0,0,0.4); padding: 15px 25px; border-radius: 12px; display: inline-flex; align-items: center; font-family: monospace; font-size: 0.95rem; border: 1px solid rgba(255,255,255,0.1); color: #3fb950; }
-        .dot { height: 12px; width: 12px; background-color: #3fb950; border-radius: 50%; display: inline-block; margin-right: 12px; animation: blink 1.5s infinite; box-shadow: 0 0 10px #3fb950; }
-        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.2; } 100% { opacity: 1; } }
-        .links { margin-top: 50px; display: flex; justify-content: center; gap: 20px; }
-        .links a { color: var(--text); text-decoration: none; font-size: 0.85rem; transition: 0.3s; padding: 12px 25px; border-radius: 10px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); font-weight: 600; letter-spacing: 1px; }
-        .links a:hover { background: var(--primary); color: #0d1117; transform: translateY(-3px); border-color: var(--primary); }
-        .secret-tag { margin-top: 40px; color: rgba(255,255,255,0.3); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 3px; }
+        html { scroll-behavior: smooth; scroll-snap-type: y mandatory; }
+        body { font-family: 'Kanit', sans-serif; background-color: #020617; color: white; margin: 0; }
+        section { height: 100vh; scroll-snap-align: start; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+        
+        /* Brightness adjusted to 0.8 (Brighter as requested) */
+        .bg-slide { position: absolute; inset: 0; background-size: cover; background-position: center; z-index: -1; filter: brightness(0.8); transition: transform 1.5s ease-out; }
+        section:hover .bg-slide { transform: scale(1.05); }
+
+        .glass { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.15); }
+        .terminal-green { background: #1e2a24; color: #e2e8f0; font-family: 'Fira Code', monospace; }
+        .highlight { color: #38bdf8; text-shadow: 0 0 15px rgba(56, 189, 248, 0.6); }
+        .bento-card { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 1.5rem; }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h1>JF5.0</h1>
-        <div class="sub-title">POST-QUANTUM ECOSYSTEM</div>
-        
-        <div class="status-box">
-            <span class="dot"></span> NODE v17.7 : ACTIVE
-        </div>
 
-        <div class="links">
-            <a href="https://github.com/mfreedomx-collab" target="_blank">GITHUB</a>
-            <a href="https://linkedin.com/in/montreejf50" target="_blank">LINKEDIN</a>
+    <!-- SECTION 1: HERO -->
+    <section>
+        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="text-center z-10 px-4">
+            <h1 class="text-6xl md:text-8xl font-bold mb-4 tracking-tighter italic">JF5.0 <span class="highlight">PQC</span></h1>
+            <p class="text-xl md:text-2xl font-light text-slate-800 uppercase tracking-[0.3em] mb-4 drop-shadow-md">Montree JF50</p>
+            <p class="text-white font-mono text-sm tracking-widest bg-sky-600/80 py-2 px-6 rounded-full inline-block uppercase shadow-lg">Next-Gen Quantum Defense</p>
+            <div class="mt-12 flex justify-center gap-4">
+                <a href="https://github.com/mfreedomx-collab" target="_blank" class="px-6 py-2 bg-slate-900/80 backdrop-blur border border-white/20 rounded-full hover:bg-sky-600 transition text-sm">GitHub</a>
+                <a href="https://linkedin.com/in/montreejf50" target="_blank" class="px-6 py-2 bg-slate-900/80 backdrop-blur border border-white/20 rounded-full hover:bg-sky-600 transition text-sm">LinkedIn</a>
+            </div>
         </div>
+    </section>
 
-        <div class="secret-tag">
-            - AUTHENTICATED ACCESS ONLY -
+    <!-- SECTION 2: HIGH SECURITY ANALYSIS (ENTROPY 7.959) -->
+    <section>
+        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="max-w-6xl w-full mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+            <div class="glass p-10 rounded-[2.5rem]">
+                <h2 class="text-3xl font-bold mb-6 highlight uppercase tracking-tight italic">Unbreakable Randomness</h2>
+                <p class="text-slate-200 mb-6 font-light">
+                    Our <span class="text-sky-400 font-bold">High Performance Mode</span> ensures that the ciphertext achieves near-perfect entropy. This prevents pattern recognition and resists frequency analysis attacks.
+                </p>
+                <div class="bg-black/40 p-6 rounded-2xl border-l-4 border-sky-500">
+                    <p class="text-4xl font-bold font-mono">7.959805</p>
+                    <p class="text-xs uppercase tracking-widest text-sky-400 mt-2">Entropy Score (Bits per Byte)</p>
+                </div>
+            </div>
+            
+            <!-- Terminal Window: Entropy 7.959 -->
+            <div class="terminal-green rounded-xl overflow-hidden border border-white/20 shadow-2xl text-[10px] md:text-xs">
+                <div class="bg-[#2d2d2d] p-3 flex justify-between items-center px-4 border-b border-black/20">
+                    <div class="flex space-x-2"><div class="w-2 h-2 bg-red-500 rounded-full"></div><div class="w-2 h-2 bg-yellow-500 rounded-full"></div><div class="w-2 h-2 bg-green-500 rounded-full"></div></div>
+                    <span class="text-[9px] uppercase tracking-widest">ent.exe - High Performance Analysis</span>
+                </div>
+                <div class="p-6 font-mono leading-relaxed">
+                    <p><span class="text-[#50fa7b]">m@ALPHA10</span> <span class="text-[#3b82f6]">C:\mdist</span></p>
+                    <p class="mb-4 text-yellow-400">$ ent cipher_v17.bin</p>
+                    <div class="text-white space-y-1">
+                        <p class="text-sky-400 font-bold">Entropy = 7.959805 bits per byte.</p>
+                        <br>
+                        <p>Optimum compression would reduce the size</p>
+                        <p>of this 5154 byte file by 0 percent.</p>
+                        <br>
+                        <p>Chi square distribution for 5154 samples is 284.19, and randomly would exceed this value 10.11 percent of the times.</p>
+                        <br>
+                        <p>Arithmetic mean value of data bytes is 127.4721 (127.5 = random).</p>
+                        <p>Monte Carlo value for Pi is 3.189755530 (error 1.53 percent).</p>
+                        <p>Serial correlation coefficient is 0.009485 (totally uncorrelated = 0.0).</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- SECTION 3: IOT & LOW BANDWIDTH MODE -->
+    <section>
+        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="max-w-6xl w-full mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+            <!-- Terminal Window: IoT Mode -->
+            <div class="terminal-green rounded-xl overflow-hidden border border-white/10 text-[10px] md:text-xs">
+                <div class="bg-[#2d2d2d] p-3 flex justify-between items-center px-4">
+                    <div class="flex space-x-2"><div class="w-2 h-2 bg-red-500 rounded-full"></div><div class="w-2 h-2 bg-yellow-500 rounded-full"></div><div class="w-2 h-2 bg-green-500 rounded-full"></div></div>
+                    <span class="text-[9px] uppercase tracking-tighter text-slate-400 font-sans">PowerShell - sender.py</span>
+                </div>
+                <div class="p-5 font-mono leading-tight">
+                    <p class="text-[#50fa7b]">m@ALPHA10 C:\mdist</p>
+                    <p class="mb-4 text-yellow-400">$ python sender.py</p>
+                    <p class="text-white bg-slate-800 px-2 py-1 inline-block mb-2">Profile: LOW (Small Packet for IoT)</p>
+                    <p class="text-sky-300 italic mb-2">Input: a=1,b=2,c=10.000010,tem=23c...</p>
+                    <p class="text-white">------------------------------------</p>
+                    <p class="text-green-400 font-bold">✅ Status: Success</p>
+                    <p>📦 Size: 354 bytes (HTTP POST Optimized)</p>
+                    <p>⏱️ Time: 35.0497 ms</p>
+                    <p class="text-slate-400 mt-4">Entropy Score: 7.426 bits/byte</p>
+                </div>
+            </div>
+
+            <div class="glass p-10 rounded-[2.5rem]">
+                <h2 class="text-3xl font-bold mb-6 italic highlight uppercase">IoT Optimization</h2>
+                <p class="text-slate-300 leading-relaxed mb-6">
+                    JF5.0 provides a specialized solution for IoT. Our **Low Bandwidth mode** produces a compact 354-byte payload, perfect for restricted networks and rapid transmission via standard HTTP POST.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-4 bg-sky-500/10 rounded-2xl text-center border border-sky-500/20">
+                        <p class="text-2xl font-bold">35 ms</p>
+                        <p class="text-[10px] uppercase text-sky-400">Ultra-Low Latency</p>
+                    </div>
+                    <div class="p-4 bg-sky-500/10 rounded-2xl text-center border border-sky-500/20">
+                        <p class="text-2xl font-bold">354 B</p>
+                        <p class="text-[10px] uppercase text-sky-400">Small Payload</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: EDUCATIONAL (QUANTUM VS PQC) -->
+    <section>
+        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="max-w-6xl w-full mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold mb-12 drop-shadow-lg text-slate-900">Quantum vs PQC</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass p-8 rounded-3xl text-left border-b-4 border-sky-500">
+                    <h3 class="text-xl font-bold mb-4">Quantum Computers</h3>
+                    <p class="text-sm text-slate-300 font-light">Machines that use Qubits to perform massive calculations. They can break standard encryption like RSA/ECC using Shor's algorithm.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl text-left border-b-4 border-yellow-500">
+                    <h3 class="text-xl font-bold mb-4">LWE + AES-256</h3>
+                    <p class="text-sm text-slate-300 font-light">My solution uses Learning With Errors (LWE), a math problem that Quantum computers cannot solve efficiently, combined with AES-256-GCM.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl text-left border-b-4 border-green-500">
+                    <h3 class="text-xl font-bold mb-4">Vibe Coding</h3>
+                    <p class="text-sm text-slate-300 font-light">Developed through AI collaboration. I embrace non-standard methodologies and welcome any expert to attempt pattern recognition on my output.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: FINAL CONTACT -->
+    <section>
+        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="glass p-12 rounded-[3rem] text-center max-w-2xl mx-auto border border-white/20">
+            <h2 class="text-4xl font-bold mb-4 uppercase italic">Get In Touch</h2>
+            <p class="text-slate-300 mb-10 font-light">
+                Ready to secure your data for the Post-Quantum era? Let's connect.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="https://github.com/mfreedomx-collab" target="_blank" rel="noopener noreferrer" class="bg-slate-900/90 hover:bg-sky-600 p-4 rounded-2xl transition font-bold border border-white/10">GitHub Portfolio</a>
+                <a href="https://linkedin.com/in/montreejf50" target="_blank" rel="noopener noreferrer" class="bg-slate-900/90 hover:bg-sky-600 p-4 rounded-2xl transition font-bold border border-white/10">LinkedIn Profile</a>
+                <a href="mailto:montree.jf50@gmail.com?subject=Inquiry%20JF5.0%20PQC" class="bg-sky-600 hover:bg-sky-500 p-4 rounded-2xl transition font-bold shadow-lg shadow-sky-500/40">Email Me</a>
+            </div>
+            <div class="mt-16 pt-8 border-t border-white/10">
+                <p class="text-[10px] text-slate-500 uppercase tracking-[0.5em]">© 2026 MONTREE JF50 | JF5.0 ECOSYSTEM</p>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
