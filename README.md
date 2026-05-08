@@ -20,4 +20,4 @@ The design, layout, and visual identity of this project are the result of extens
 - **Quantum Resistance:** LWE & Lattice-based security concepts.
 
 ---
-© 2026 JF5.0 PQC ECOSYSTEM | SECURED BY BL-TAO DESIGN | AI NEO V17
+© 2026 JF5.0 PQC ECOSYSTEM | SECURED BY Montree DESIGN | 
