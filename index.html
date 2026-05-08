@@ -4,35 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JF5.0 Ecosystem | Post-Quantum Cryptography by Montree</title>
+    <!-- External Scripts & Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        html { scroll-behavior: smooth; scroll-snap-type: y mandatory; }
-        body { font-family: 'Kanit', sans-serif; background-color: #020617; color: white; margin: 0; }
-        section { height: 100vh; scroll-snap-align: start; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-        
-        /* Background Brightness 0.8 */
-        .bg-slide { position: absolute; inset: 0; background-size: cover; background-position: center; z-index: -1; filter: brightness(0.8); transition: transform 1.5s ease-out; }
-        section:hover .bg-slide { transform: scale(1.05); }
-
-        .glass { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.15); }
-        .terminal-green { background: #1e2a24; color: #e2e8f0; font-family: 'Fira Code', monospace; }
-        .highlight { color: #38bdf8; text-shadow: 0 0 15px rgba(56, 189, 248, 0.6); }
-        
-        /* Navbar Custom Style */
-        nav { 
-            position: fixed; top: 0; width: 100%; z-index: 100; 
-            background: rgba(2, 6, 23, 0.7); backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .nav-link { position: relative; transition: color 0.3s; }
-        .nav-link::after {
-            content: ''; position: absolute; width: 0; height: 2px;
-            bottom: -4px; left: 0; background: #38bdf8;
-            transition: width 0.3s;
-        }
-        .nav-link:hover::after { width: 100%; }
-    </style>
+    
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -44,14 +21,12 @@
                 <span class="font-bold tracking-tighter text-lg md:text-xl italic uppercase">JF5.0 <span class="highlight">Ecosystem</span></span>
             </div>
             
-            <!-- Desktop Menu -->
             <div class="hidden md:flex gap-8 text-sm font-light tracking-widest uppercase">
                 <a href="index.html" class="nav-link text-sky-400 font-bold">Home</a>
                 <a href="showcase.html" class="nav-link text-white hover:text-sky-400">PQC Showcase</a>
                 <a href="https://github.com/mfreedomx-collab" target="_blank" class="nav-link text-white hover:text-sky-400">GitHub</a>
             </div>
 
-            <!-- Mobile Showcase Button -->
             <div class="md:hidden">
                 <a href="showcase.html" class="text-[10px] bg-sky-600 px-3 py-1 rounded-full font-bold uppercase shadow-lg">Showcase</a>
             </div>
@@ -60,7 +35,7 @@
 
     <!-- SECTION 1: HERO -->
     <section>
-        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="bg-slide" style="background-image: url('images/bg-hero.jpg');"></div>
         <div class="text-center z-10 px-4">
             <h1 class="text-6xl md:text-8xl font-bold mb-4 tracking-tighter italic uppercase">JF5.0 <span class="highlight">PQC</span></h1>
             <p class="text-xl md:text-2xl font-light text-slate-200 uppercase tracking-[0.3em] mb-4 drop-shadow-md">Montree JF50</p>
@@ -78,18 +53,15 @@
         </div>
     </section>
 
-    
-<!-- SECTION 2: INDUSTRIAL VALIDATION (PractRand & ENT) -->
+    <!-- SECTION 2: INDUSTRIAL VALIDATION (PractRand & ENT) -->
     <section>
-        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="bg-slide" style="background-image: url('images/bg-analysis.jpg');"></div>
         <div class="max-w-7xl w-full mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
-            
             <div class="glass p-10 rounded-[2.5rem]">
                 <h2 class="text-3xl font-bold mb-6 highlight uppercase tracking-tight italic">Unbreakable Randomness</h2>
                 <p class="text-slate-200 mb-8 font-light leading-relaxed">
                     Our <span class="text-sky-400 font-bold">JF5.0 PQC</span> algorithm achieves near-perfect entropy, verified by elite industrial tools. Passing 107 tests in <span class="text-green-400 font-bold">PractRand</span> ensures absolute immunity to quantum-powered statistical attacks.
                 </p>
-                
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="bg-black/40 p-6 rounded-2xl border-l-4 border-sky-500">
                         <p class="text-4xl font-bold font-mono">7.9660</p>
@@ -102,7 +74,6 @@
                 </div>
             </div>
             
-            <!-- Terminal with Real Research Logs -->
             <div class="terminal-green rounded-xl overflow-hidden border border-white/20 shadow-2xl text-[10px] md:text-xs">
                 <div class="bg-[#2d2d2d] p-3 flex justify-between items-center px-4 border-b border-black/20">
                     <div class="flex space-x-2">
@@ -112,25 +83,17 @@
                     </div>
                     <span class="text-[9px] uppercase tracking-widest text-gray-400">Security Research Log - ALPHA10</span>
                 </div>
-                
                 <div class="p-6 font-mono leading-relaxed bg-[#1e1e1e] max-h-[400px] overflow-y-auto custom-scrollbar">
                     <p><span class="text-[#50fa7b]">m@ALPHA10</span> <span class="text-[#3b82f6]">~/test</span></p>
                     <p class="text-yellow-400">$ ent cipher_v17.bin</p>
                     <pre class="text-gray-300 mb-6 border-l border-gray-700 pl-4">
 Entropy = <span class="text-sky-400">7.966096 bits per byte</span>.
-Optimum compression would reduce size by 0 percent.
-Chi square distribution: 239.38 (75.06%)</pre>
-
+Optimum compression would reduce size by 0 percent.</pre>
                     <p><span class="text-[#50fa7b]">m@ALPHA10</span> <span class="text-[#3b82f6]">~/test/PractRand</span></p>
                     <p class="text-yellow-400">$ cat cipher_v17_nist_test.bin | ./RNG_test.exe stdin32 -tlmin 8M</p>
                     <pre class="text-gray-300 border-l border-green-700 pl-4">
 RNG_test.exe using PractRand version 0.96
-RNG = RNG_stdin32, folding = standard (32 bit)
-
-rng=RNG_stdin32, seed=unknown
-length= 8 megabytes (2^23 bytes), time= 0.8 seconds
 <span class="text-green-400 font-bold">✅ no anomalies in 107 test result(s)</span>
-
 [Status: FINISHED - Data Exhausted]</pre>
                 </div>
             </div>
@@ -139,36 +102,32 @@ length= 8 megabytes (2^23 bytes), time= 0.8 seconds
 
     <!-- SECTION 3: IOT & LOW BANDWIDTH MODE -->
     <section>
-        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="bg-slide" style="background-image: url('images/bg-iot.jpg');"></div>
         <div class="max-w-6xl w-full mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
             <div class="terminal-green rounded-xl overflow-hidden border border-white/10 text-[10px] md:text-xs">
                 <div class="bg-[#2d2d2d] p-3 flex justify-between items-center px-4">
                     <div class="flex space-x-2"><div class="w-2 h-2 bg-red-500 rounded-full"></div><div class="w-2 h-2 bg-yellow-500 rounded-full"></div><div class="w-2 h-2 bg-green-500 rounded-full"></div></div>
                     <span class="text-[9px] uppercase tracking-tighter text-slate-400 font-sans">PowerShell - sender.py</span>
                 </div>
-                <div class="p-5 font-mono leading-tight">
+                <div class="p-5 font-mono leading-tight bg-[#1e1e1e]">
                     <p class="text-[#50fa7b]">m@ALPHA10 C:\mdist</p>
                     <p class="mb-4 text-yellow-400">$ python sender.py</p>
                     <p class="text-white bg-slate-800 px-2 py-1 inline-block mb-2">Profile: LOW (Small Packet for IoT)</p>
                     <p class="text-green-400 font-bold">✅ Status: Success</p>
-                    <p>📦 Size: 354 bytes (HTTP POST Optimized)</p>
-                    <p>⏱️ Time: 35.0497 ms</p>
+                    <p>📦 Size: 354 bytes | ⏱️ Time: 35.0497 ms</p>
                 </div>
             </div>
-
             <div class="glass p-10 rounded-[2.5rem]">
                 <h2 class="text-3xl font-bold mb-6 italic highlight uppercase">IoT Optimization</h2>
-                <p class="text-slate-300 leading-relaxed mb-6">
-                    JF5.0 provides a specialized solution for IoT. Our **Low Bandwidth mode** produces a compact 354-byte payload, perfect for restricted networks.
-                </p>
+                <p class="text-slate-300 leading-relaxed mb-6">JF5.0 provides a specialized solution for IoT. Our **Low Bandwidth mode** produces a compact 354-byte payload, perfect for restricted networks.</p>
                 <div class="grid grid-cols-2 gap-4">
                     <div class="p-4 bg-sky-500/10 rounded-2xl text-center border border-sky-500/20">
                         <p class="text-2xl font-bold">35 ms</p>
-                        <p class="text-[10px] uppercase text-sky-400">Ultra-Low Latency</p>
+                        <p class="text-[10px] uppercase text-sky-400">Latency</p>
                     </div>
                     <div class="p-4 bg-sky-500/10 rounded-2xl text-center border border-sky-500/20">
                         <p class="text-2xl font-bold">354 B</p>
-                        <p class="text-[10px] uppercase text-sky-400">Small Payload</p>
+                        <p class="text-[10px] uppercase text-sky-400">Payload</p>
                     </div>
                 </div>
             </div>
@@ -177,7 +136,7 @@ length= 8 megabytes (2^23 bytes), time= 0.8 seconds
 
     <!-- SECTION 4: EDUCATIONAL -->
     <section>
-        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="bg-slide" style="background-image: url('images/bg-edu.jpg');"></div>
         <div class="max-w-6xl w-full mx-auto px-6 text-center">
             <h2 class="text-5xl font-bold mb-12 drop-shadow-lg text-slate-100 uppercase italic">Quantum vs PQC</h2>
             <div class="grid md:grid-cols-3 gap-6">
@@ -199,7 +158,7 @@ length= 8 megabytes (2^23 bytes), time= 0.8 seconds
 
     <!-- SECTION 5: FINAL CONTACT -->
     <section>
-        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="bg-slide" style="background-image: url('images/bg-contact.jpg');"></div>
         <div class="glass p-12 rounded-[3rem] text-center max-w-2xl mx-auto border border-white/20">
             <h2 class="text-4xl font-bold mb-4 uppercase italic">Get In Touch</h2>
             <p class="text-slate-300 mb-10 font-light">Ready to secure your data for the Post-Quantum era?</p>
