@@ -1,4 +1,4 @@
-# 🛡️ JF5.0 CORE ECOSYSTEM - v17.7
+# 🛡️ JF5.0 CORE ECOSYSTEM - v12
 
 ### "Securing the Future with Post-Quantum Cryptography"
 
@@ -21,4 +21,11 @@ The design, layout, and visual identity of this project are the result of intens
 - **Quantum Resistance:** Advanced security concepts designed for the Post-Quantum era.
 
 ---
+
+NOTICE: FOR EDUCATIONAL & RESEARCH PURPOSES ONLY
+
+This framework and algorithm architecture are developed strictly for academic evaluation within a Sandbox Environment. Do not use in production.
+
+True production-grade Post-Quantum Cryptography (PQC) standards must always comply with officially validated national security frameworks (such as NIST FIPS standards) to ensure proper validation and regulatory compliance.
+
 © 2026 JF5.0 PQC ECOSYSTEM | SECURED BY PROPRIETARY DESIGN | v17.7
