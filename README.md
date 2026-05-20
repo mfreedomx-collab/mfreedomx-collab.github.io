@@ -1,4 +1,4 @@
-# 🛡️ JF5.0 CORE ECOSYSTEM - v12
+# 🛡️ JF5.0 CORE ECOSYSTEM - v12e
 
 ### "Securing the Future with Post-Quantum Cryptography"
 
@@ -16,16 +16,16 @@ The design, layout, and visual identity of this project are the result of intens
 > *"You can clone the code, but you cannot clone the soul of JF5.0."*
 
 ## 🚀 Key Features Demonstrated
-- **Post-Quantum Randomization:** Achieved near-perfect entropy (7.96+ Score).
+- **Post-Quantum Randomization:** Achieved near-perfect entropy (7.x+ Score).
 - **Ghost Protocol:** Implementation of Secure Secret Sharing (SSS) mechanisms.
 - **Quantum Resistance:** Advanced security concepts designed for the Post-Quantum era.
 
 ---
 
-NOTICE: FOR EDUCATIONAL & RESEARCH PURPOSES ONLY
+## NOTICE: FOR EDUCATIONAL & RESEARCH PURPOSES ONLY
 
 This framework and algorithm architecture are developed strictly for academic evaluation within a Sandbox Environment. Do not use in production.
 
 True production-grade Post-Quantum Cryptography (PQC) standards must always comply with officially validated national security frameworks (such as NIST FIPS standards) to ensure proper validation and regulatory compliance.
 
-© 2026 JF5.0 PQC ECOSYSTEM | SECURED BY PROPRIETARY DESIGN | v17.7
+© 2026 JF5.0 PQC ECOSYSTEM | SECURED BY PROPRIETARY DESIGN | v12e
