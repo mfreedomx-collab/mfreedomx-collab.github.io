@@ -21,6 +21,8 @@ The design, layout, and visual identity of this project are the result of intens
 - **Quantum Resistance:** Advanced security concepts designed for the Post-Quantum era.
 
 ---
+---
+📰 Current Focus: This project serves as a foundational milestone in my deep tech journey. I have pivoted my main focus toward Deep Tech Journalism & AI Analysis, using this technical background to decode and report on next-generation security and AI infrastructures for the tech community.
 
 ## NOTICE: FOR EDUCATIONAL & RESEARCH PURPOSES ONLY
 
