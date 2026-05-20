@@ -4,23 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JF5.0 Ecosystem | Post-Quantum Cryptography by Montree</title>
-    <!-- External Scripts & Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    
-    <!-- Link to external CSS -->
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- NAVIGATION MENU -->
     <nav class="p-4 md:p-6">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-2">
                 <div class="w-8 h-8 bg-sky-600 rounded-lg flex items-center justify-center font-bold text-xs shadow-lg shadow-sky-500/40">JF</div>
                 <span class="font-bold tracking-tighter text-lg md:text-xl italic uppercase">JF5.0 <span class="highlight">Ecosystem</span></span>
             </div>
-            
+
             <div class="hidden md:flex gap-8 text-sm font-light tracking-widest uppercase">
                 <a href="index.html" class="nav-link text-sky-400 font-bold">Home</a>
                 <a href="showcase.html" class="nav-link text-white hover:text-sky-400">PQC Showcase</a>
@@ -33,27 +30,41 @@
         </div>
     </nav>
 
-    <!-- SECTION 1: HERO -->
     <section>
         <div class="bg-slide" style="background-image: url('images/bg-hero.jpg');"></div>
-        <div class="text-center z-10 px-4">
-            <h1 class="text-6xl md:text-8xl font-bold mb-4 tracking-tighter italic uppercase">JF5.0 <span class="highlight">PQC</span></h1>
-            <p class="text-xl md:text-2xl font-light text-slate-200 uppercase tracking-[0.3em] mb-4 drop-shadow-md">Montree JF50</p>
-            <p class="text-white font-mono text-sm tracking-widest bg-sky-600/80 py-2 px-6 rounded-full inline-block uppercase shadow-lg">Next-Gen Quantum Defense</p>
+        <div class="text-center z-10 px-4 max-w-5xl mx-auto flex flex-col justify-center items-center h-full pt-16">
             
-            <div class="mt-12 flex flex-col md:flex-row justify-center gap-6">
-                <a href="showcase.html" class="px-8 py-3 bg-sky-600 hover:bg-sky-500 rounded-full transition text-sm font-bold shadow-lg shadow-sky-500/40 flex items-center justify-center gap-2">
-                    🚀 Explore Showcase
-                </a>
-                <div class="flex justify-center gap-4">
-                    <a href="https://github.com/mfreedomx-collab" target="_blank" class="px-6 py-3 bg-slate-900/80 backdrop-blur border border-white/20 rounded-full hover:bg-white hover:text-black transition text-sm">GitHub</a>
-                    <a href="https://linkedin.com/in/montreejf50" target="_blank" class="px-6 py-3 bg-slate-900/80 backdrop-blur border border-white/20 rounded-full hover:bg-white hover:text-black transition text-sm">LinkedIn</a>
+            <h1 class="text-5xl md:text-7xl font-bold mb-2 tracking-tighter italic uppercase">JF5.0 <span class="highlight">PQC</span></h1>
+            <p class="text-lg md:text-xl font-light text-slate-200 uppercase tracking-[0.3em] mb-2 drop-shadow-md">Montree JF50</p>
+            <p class="text-white font-mono text-xs tracking-widest bg-sky-600/80 py-1.5 px-5 rounded-full inline-block uppercase shadow-lg mb-6">Next-Gen Quantum Defense</p>
+
+            <div class="bg-slate-950/85 backdrop-blur border-2 border-amber-500 rounded-3xl p-6 md:p-8 max-w-3xl text-left shadow-2xl shadow-amber-500/10 mb-8">
+                <div class="flex items-center gap-2 text-amber-400 font-mono text-sm md:text-base font-black uppercase tracking-widest mb-3">
+                    <span>⚠️</span> NOTICE: FOR EDUCATIONAL & RESEARCH PURPOSES ONLY
+                </div>
+                <div class="text-slate-200 font-normal text-sm md:text-base leading-relaxed space-y-3">
+                    <p>
+                        This framework and algorithm architecture are developed strictly for academic evaluation within a <span class="text-sky-400 font-mono font-bold bg-sky-500/10 px-2 py-0.5 rounded">Sandbox Environment</span>. <span class="text-amber-400 font-bold underline">Do not use in production.</span>
+                    </p>
+                    <p>
+                        True production-grade Post-Quantum Cryptography (PQC) standards must always comply with officially validated national security frameworks (such as <span class="text-white font-bold underline decoration-amber-500 decoration-2">NIST FIPS standards</span>) to ensure proper validation and regulatory compliance.
+                    </p>
                 </div>
             </div>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
+                <a href="showcase.html" class="px-6 py-2.5 bg-sky-600 hover:bg-sky-500 rounded-full transition text-xs font-bold shadow-lg shadow-sky-500/40 flex items-center justify-center gap-2">
+                    🚀 Explore Showcase
+                </a>
+                <div class="flex justify-center gap-3">
+                    <a href="https://github.com/mfreedomx-collab" target="_blank" class="px-5 py-2.5 bg-slate-900/80 backdrop-blur border border-white/20 rounded-full hover:bg-white hover:text-black transition text-xs">GitHub</a>
+                    <a href="https://linkedin.com/in/montreejf50" target="_blank" class="px-5 py-2.5 bg-slate-900/80 backdrop-blur border border-white/20 rounded-full hover:bg-white hover:text-black transition text-xs">LinkedIn</a>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- SECTION 2: INDUSTRIAL VALIDATION (PractRand & ENT) -->
     <section>
         <div class="bg-slide" style="background-image: url('images/bg-analysis.jpg');"></div>
         <div class="max-w-7xl w-full mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
@@ -73,7 +84,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="terminal-green rounded-xl overflow-hidden border border-white/20 shadow-2xl text-[10px] md:text-xs">
                 <div class="bg-[#2d2d2d] p-3 flex justify-between items-center px-4 border-b border-black/20">
                     <div class="flex space-x-2">
@@ -86,21 +97,20 @@
                 <div class="p-6 font-mono leading-relaxed bg-[#1e1e1e] max-h-[400px] overflow-y-auto custom-scrollbar">
                     <p><span class="text-[#50fa7b]">m@ALPHA10</span> <span class="text-[#3b82f6]">~/test</span></p>
                     <p class="text-yellow-400">$ ent cipher_v17.bin</p>
-                    <pre class="text-gray-300 mb-6 border-l border-gray-700 pl-4">
+                    <div class="text-gray-300 mb-6 border-l border-gray-700 pl-4">
 Entropy = <span class="text-sky-400">7.966096 bits per byte</span>.
-Optimum compression would reduce size by 0 percent.</pre>
+Optimum compression would reduce size by 0 percent.</div>
                     <p><span class="text-[#50fa7b]">m@ALPHA10</span> <span class="text-[#3b82f6]">~/test/PractRand</span></p>
                     <p class="text-yellow-400">$ cat cipher_v17_nist_test.bin | ./RNG_test.exe stdin32 -tlmin 8M</p>
-                    <pre class="text-gray-300 border-l border-green-700 pl-4">
+                    <div class="text-gray-300 border-l border-green-700 pl-4">
 RNG_test.exe using PractRand version 0.96
 <span class="text-green-400 font-bold">✅ no anomalies in 107 test result(s)</span>
-[Status: FINISHED - Data Exhausted]</pre>
+[Status: FINISHED - Data Exhausted]</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 3: IOT & LOW BANDWIDTH MODE -->
     <section>
         <div class="bg-slide" style="background-image: url('images/bg-iot.jpg');"></div>
         <div class="max-w-6xl w-full mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
@@ -134,8 +144,91 @@ RNG_test.exe using PractRand version 0.96
         </div>
     </section>
 
-    <!-- SECTION 4: EDUCATIONAL -->
-    <section>
+   <section>
+        <div class="bg-slide" style="background-image: url('images/bg-real.jpg');"></div>
+        <div class="max-w-6xl w-full mx-auto px-6 flex flex-col justify-center h-full">
+            
+            <div class="text-center mb-8">
+                <h2 class="text-4xl md:text-5xl font-bold drop-shadow-lg text-slate-100 uppercase italic tracking-tight">
+                    Quantum vs <span class="highlight">PQC Blueprint</span>
+                </h2>
+                <p class="text-xs md:text-sm font-mono text-slate-400 uppercase tracking-[0.2em] mt-2">
+                    Architectural Mapping Based on NIST FIPS Standards (Post-Quantum Cryptography)
+                </p>
+            </div>
+
+            <div class="glass p-6 md:p-8 rounded-[2rem] border border-white/10 shadow-2xl mb-8 overflow-x-auto custom-scrollbar">
+                <table class="w-full text-left border-collapse min-w-[600px]">
+                    <thead>
+                        <tr class="border-b border-white/20 text-sky-400 font-mono text-xs md:text-sm uppercase tracking-wider">
+                            <th class="pb-4 w-1/4">Cryptographic Layer</th>
+                            <th class="pb-4 w-1/3">Legacy (Broken by Quantum)</th>
+                            <th class="pb-4 w-1/3 text-green-400 font-bold">NIST Approved Standard (PQC)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-xs md:text-sm font-light text-slate-200 divide-y divide-white/5 font-mono">
+                        <tr>
+                            <td class="py-4 font-bold text-slate-100 font-sans">
+                                🔑 Key Exchange <br>
+                                <span class="text-[10px] font-normal text-slate-400 uppercase tracking-tighter">(การแลกเปลี่ยนคู่กุญแจ)</span>
+                            </td>
+                            <td class="py-4 text-red-400/80">ECDHE (X25519, P-256) / RSA-KEM</td>
+                            <td class="py-4 text-green-400 font-medium">
+                                <span class="bg-green-500/10 border border-green-500/30 px-2 py-1 rounded font-bold">ML-KEM</span> (FIPS 203) <br>
+                                <span class="text-[10px] text-slate-400 font-sans block mt-1">*ใช้สร้างและแลกเปลี่ยนความลับเพื่อเริ่มต้นเซสชัน</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 font-bold text-slate-100 font-sans">
+                                🔒 Bulk Encryption <br>
+                                <span class="text-[10px] font-normal text-slate-400 uppercase tracking-tighter">(การเข้ารหัสข้อมูลหลัก)</span>
+                            </td>
+                            <td class="py-4 text-slate-400">No Change Required (Quantum Safe)</td>
+                            <td class="py-4 text-sky-400 font-medium">
+                                <span class="bg-sky-500/10 border border-sky-500/30 px-2 py-1 rounded font-bold">AES-GCM (256-bit)</span> <br>
+                                <span class="text-[10px] text-slate-400 font-sans block mt-1">*ใช้กุญแจที่ได้จาก ML-KEM มาวิ่งเข้ารหัสข้อมูลความเร็วสูงต่อไป</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 font-bold text-slate-100 font-sans">
+                                🖋️ Digital Signature <br>
+                                <span class="text-[10px] font-normal text-slate-400 uppercase tracking-tighter">(ลายเซ็นดิจิทัลยืนยันตัวตน)</span>
+                            </td>
+                            <td class="py-4 text-red-400/80">RSA / ECDSA (Ed25519)</td>
+                            <td class="py-4 text-green-400 font-medium space-y-1.5">
+                                <div>
+                                    <span class="bg-green-500/10 border border-green-500/30 px-2 py-0.5 rounded font-bold">ML-DSA</span> (FIPS 204) 
+                                    <span class="text-[10px] text-slate-400 font-sans font-normal">— Primary Standard (Lattice-Based)</span>
+                                </div>
+                                <div class="pt-1">
+                                    <span class="bg-green-500/10 border border-green-500/30 px-2 py-0.5 rounded font-bold">SLH-DSA</span> (FIPS 205) 
+                                    <span class="text-[10px] text-slate-400 font-sans font-normal">— Conservative Backup (Hash-Based)</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="glass p-5 rounded-2xl text-left border-b-2 border-sky-500">
+                    <h3 class="text-md font-bold mb-2 text-slate-100">Quantum Threat</h3>
+                    <p class="text-xs text-slate-400 font-light leading-relaxed">Shor's algorithm running on a cryptanalytically useful quantum computer will completely break current asymmetric infrastructure (RSA/ECC).</p>
+                </div>
+                <div class="glass p-5 rounded-2xl text-left border-b-2 border-amber-500">
+                    <h3 class="text-md font-bold mb-2 text-slate-100">Math Foundation</h3>
+                    <p class="text-xs text-slate-400 font-light leading-relaxed">NIST PQC standards leverage hard mathematical problems like Lattice Cryptography (LWE) and Spherical Trees that are secure against both classical and quantum computers.</p>
+                </div>
+                <div class="glass p-5 rounded-2xl text-left border-b-2 border-green-500">
+                    <h3 class="text-md font-bold mb-2 text-slate-100">Implementation Scope</h3>
+                    <p class="text-xs text-slate-400 font-light leading-relaxed">This sandbox environment demonstrates integration patterns and entropy verification. Production deployment must always use NIST certified crypto modules.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+	<section>
         <div class="bg-slide" style="background-image: url('images/bg-edu.jpg');"></div>
         <div class="max-w-6xl w-full mx-auto px-6 text-center">
             <h2 class="text-5xl font-bold mb-12 drop-shadow-lg text-slate-100 uppercase italic">Quantum vs PQC</h2>
@@ -156,7 +249,6 @@ RNG_test.exe using PractRand version 0.96
         </div>
     </section>
 
-    <!-- SECTION 5: FINAL CONTACT -->
     <section>
         <div class="bg-slide" style="background-image: url('images/bg-contact.jpg');"></div>
         <div class="glass p-12 rounded-[3rem] text-center max-w-2xl mx-auto border border-white/20">
