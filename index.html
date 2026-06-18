@@ -6,12 +6,33 @@
     <title>JF5.0 Ecosystem | Sovereign Post-Quantum Cryptography by Montree</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght=300;400;600&family=Fira+Code:wght=400;500&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* สไตล์เสริมเพื่อให้เมนูมือถือลื่นไหล */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+        .hidden-menu {
+            transform: translateX(100%);
+        }
+        /* คุมทับปุ่มแฮมเบอร์เกอร์ให้เด่นบนหน้าจอมือถือ */
+        .menu-toggle-btn {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+        .menu-toggle-btn div {
+            width: 24px;
+            height: 2px;
+            background-color: white;
+            transition: 0.3s;
+        }
+    </style>
 </head>
-<body>
+<body class="overflow-x-hidden">
 
-    <nav class="absolute top-0 left-0 w-full p-4 md:p-6 z-5xl">
+    <nav class="absolute top-0 left-0 w-full p-4 md:p-6 z-40 bg-slate-950/60 backdrop-blur-md md:bg-transparent">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-2">
                 <div class="w-8 h-8 bg-sky-600 rounded-lg flex items-center justify-center font-bold text-xs shadow-lg shadow-sky-500/40">JF</div>
@@ -26,21 +47,33 @@
             </div>
 
             <div class="md:hidden">
-                <a href="showcase.html" class="text-[10px] bg-sky-600 px-3 py-1 rounded-full font-bold uppercase shadow-lg">Showcase</a>
+                <button id="hamburger-trigger" class="menu-toggle-btn focus:outline-none" aria-label="Toggle Menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
             </div>
         </div>
     </nav>
+
+    <div id="mobile-menu" class="fixed top-0 right-0 w-4/5 sm:w-1/2 h-full bg-slate-950/95 z-50 p-8 shadow-2xl border-l border-white/10 hidden-menu flex flex-col gap-6 text-sm font-medium tracking-widest uppercase pt-24">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-white text-xl font-bold focus:outline-none">✕</button>
+        <a href="index.html" class="text-sky-400 font-bold" onclick="toggleMenu()">Home</a>
+        <a href="ecc.html" class="text-sky-400 font-bold" onclick="toggleMenu()">Fast ECC Hybird for IoT</a>
+        <a href="showcase.html" class="text-white hover:text-sky-400" onclick="toggleMenu()">PQC Showcase</a>
+        <a href="https://github.com/mfreedomx-collab" target="_blank" class="text-white hover:text-sky-400" onclick="toggleMenu()">GitHub</a>
+    </div>
 
     <section class="relative block w-full">
         <div class="bg-slide" style="background-image: url('images/bg-hero.jpg');"></div>
         <div class="text-center z-10 px-4 max-w-5xl mx-auto flex flex-col justify-center items-center h-full pt-40 md:pt-52 pb-20">
             
-            <h1 class="text-5xl md:text-7xl font-bold mb-2 tracking-tighter italic uppercase mt-4">JF5.0 <span class="highlight">PQC</span></h1>
+            <h1 class="text-4xl md:text-7xl font-bold mb-2 tracking-tighter italic uppercase mt-4">JF5.0 <span class="highlight">PQC</span></h1>
             <p class="text-lg md:text-xl font-light text-slate-200 uppercase tracking-[0.3em] mb-2 drop-shadow-md">Montree JF50</p>
             <p class="text-white font-mono text-xs tracking-widest bg-sky-600/80 py-1.5 px-5 rounded-full inline-block uppercase shadow-lg mb-8">Absolute Independent Architecture</p>
 
             <div class="bg-slate-950/90 backdrop-blur border-2 border-sky-500 rounded-3xl p-6 md:p-8 max-w-3xl text-left shadow-2xl shadow-sky-500/10 mb-6 w-full">
-                <div class="flex items-center gap-2 text-sky-400 font-mono text-sm md:text-base font-black uppercase tracking-widest mb-3">
+                <div class="flex items-center gap-2 text-sky-400 font-mono text-xs md:text-base font-black uppercase tracking-widest mb-3">
                     <span>👑</span> SOVEREIGN DECLARATION: 100% INDEPENDENT SYSTEM
                 </div>
                 <div class="text-slate-200 font-normal text-sm md:text-base leading-relaxed space-y-3 font-sans">
@@ -56,7 +89,7 @@
             </div>
 
             <div class="bg-slate-950/85 backdrop-blur border-2 border-amber-500 rounded-3xl p-6 md:p-8 max-w-3xl text-left shadow-2xl shadow-amber-500/10 mb-8 w-full">
-                <div class="flex items-center gap-2 text-amber-400 font-mono text-sm md:text-base font-black uppercase tracking-widest mb-3">
+                <div class="flex items-center gap-2 text-amber-400 font-mono text-xs md:text-base font-black uppercase tracking-widest mb-3">
                     <span>⚠️</span> NOTICE: FOR EDUCATIONAL & RESEARCH PURPOSES ONLY
                 </div>
                 <div class="text-slate-200 font-normal text-sm md:text-base leading-relaxed space-y-3">
@@ -280,6 +313,20 @@ RNG_test.exe using PractRand version 0.96
             </div>
         </div>
     </section>
+
+    <script>
+        const burgerTrigger = document.getElementById('hamburger-trigger');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden-menu');
+            document.body.classList.toggle('overflow-hidden'); // บล็อกไม่ให้หน้าจอหลักเลื่อนตอนกางเมนู
+        }
+
+        if(burgerTrigger) burgerTrigger.addEventListener('click', toggleMenu);
+        if(closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+    </script>
 
 </body>
 </html>
