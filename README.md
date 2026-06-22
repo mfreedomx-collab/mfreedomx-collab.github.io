@@ -4,12 +4,7 @@
 
 This repository contains the **Official Showcase Architecture** for the JF5.0 Ecosystem. 
 Developed by **Montree (ALPHA10)** in collaboration with **Private AI Partner**.
-— Vibe Coding Man 
-My IP 
-1 Fast ECC Hybrid X25519 + Random Salt in RAM + AES
-Pre-Emptive Quantum Resistant 
-2 Fast PQC Hybrid X25519 + MLKEM768 +AES
-3 JF5.0 Ecosystem
+
 ---
 
 ## ⚠️ Intellectual Property Notice
@@ -17,6 +12,12 @@ The design, layout, and visual identity of this project are the result of intens
 
 - **Core Logic:** Powered by the **JF5.0 Proprietary PQC Engine**. All cryptographic formulas and internal logic are private and are not included in this public repository.
 - **Frontend:** This UI/UX is built with HTML/TailwindCSS specifically for architectural demonstration.
+- — Vibe Coding Man 
+My IP 
+1 Fast ECC Hybrid X25519 + Random Salt in RAM + AES
+Pre-Emptive Quantum Resistant 
+2 Fast PQC Hybrid X25519 + MLKEM768 +AES
+3 JF5.0 Ecosystem
 
 > *"You can clone the code, but you cannot clone the soul of JF5.0."*
 
