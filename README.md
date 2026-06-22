@@ -14,10 +14,10 @@ The design, layout, and visual identity of this project are the result of intens
 - **Frontend:** This UI/UX is built with HTML/TailwindCSS specifically for architectural demonstration.
 - — Vibe Coding Man 
 My IP 
-1 Fast ECC Hybrid X25519 + Random Salt in RAM + AES
+- 1 Fast ECC Hybrid X25519 + Random Salt in RAM + AES
 Pre-Emptive Quantum Resistant 
-2 Fast PQC Hybrid X25519 + MLKEM768 +AES
-3 JF5.0 Ecosystem
+- 2 Fast PQC Hybrid X25519 + MLKEM768 +AES
+- 3 JF5.0 Ecosystem
 
 > *"You can clone the code, but you cannot clone the soul of JF5.0."*
 
