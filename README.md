@@ -4,7 +4,12 @@
 
 This repository contains the **Official Showcase Architecture** for the JF5.0 Ecosystem. 
 Developed by **Montree (ALPHA10)** in collaboration with **Private AI Partner**.
-
+— Vibe Coding Man 
+My IP 
+1 Fast ECC Hybrid X25519 + Random Salt in RAM + AES
+Pre-Emptive Quantum Resistant 
+2 Fast PQC Hybrid X25519 + MLKEM768 +AES
+3 JF5.0 Ecosystem
 ---
 
 ## ⚠️ Intellectual Property Notice
