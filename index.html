@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JF5.0 Ecosystem | Sovereign Post-Quantum Cryptography by Montree</title>
+    <title>Sovereign Local AI Core | V11.3 Architecture by Montree</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght=300;400;600&family=Fira+Code:wght=400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <style>
         /* สไตล์เสริมเพื่อให้เมนูมือถือลื่นไหล */
@@ -15,7 +15,6 @@
         .hidden-menu {
             transform: translateX(100%);
         }
-        /* คุมทับปุ่มแฮมเบอร์เกอร์ให้เด่นบนหน้าจอมือถือ */
         .menu-toggle-btn {
             display: flex;
             flex-direction: column;
@@ -32,17 +31,16 @@
 </head>
 <body class="overflow-x-hidden">
 
+    <!-- Navbar -->
     <nav class="absolute top-0 left-0 w-full p-4 md:p-6 z-40 bg-slate-950/60 backdrop-blur-md md:bg-transparent">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-sky-600 rounded-lg flex items-center justify-center font-bold text-xs shadow-lg shadow-sky-500/40">JF</div>
-                <span class="font-bold tracking-tighter text-lg md:text-xl italic uppercase">JF5.0 <span class="highlight">Ecosystem</span></span>
+                <div class="w-8 h-8 bg-sky-600 rounded-lg flex items-center justify-center font-bold text-xs shadow-lg shadow-sky-500/40 font-mono">AI</div>
+                <span class="font-bold tracking-tighter text-lg md:text-xl italic uppercase">Sovereign <span class="highlight">Core</span></span>
             </div>
 
             <div class="hidden md:flex gap-8 text-sm font-light tracking-widest uppercase">
                 <a href="index.html" class="nav-link text-sky-400 font-bold">Home</a>
-                <a href="ecc.html" class="nav-link text-sky-400 font-bold">Fast ECC Hybird for IoT</a>
-                <a href="showcase.html" class="nav-link text-white hover:text-sky-400">PQC Showcase</a>
                 <a href="https://github.com/mfreedomx-collab" target="_blank" class="nav-link text-white hover:text-sky-400">GitHub</a>
             </div>
 
@@ -56,81 +54,63 @@
         </div>
     </nav>
 
+    <!-- Mobile Menu -->
     <div id="mobile-menu" class="fixed top-0 right-0 w-4/5 sm:w-1/2 h-full bg-slate-950/95 z-50 p-8 shadow-2xl border-l border-white/10 hidden-menu flex flex-col gap-6 text-sm font-medium tracking-widest uppercase pt-24">
         <button id="close-menu-btn" class="absolute top-6 right-6 text-white text-xl font-bold focus:outline-none">✕</button>
         <a href="index.html" class="text-sky-400 font-bold" onclick="toggleMenu()">Home</a>
-        <a href="ecc.html" class="text-sky-400 font-bold" onclick="toggleMenu()">Fast ECC Hybird for IoT</a>
-        <a href="showcase.html" class="text-white hover:text-sky-400" onclick="toggleMenu()">PQC Showcase</a>
         <a href="https://github.com/mfreedomx-collab" target="_blank" class="text-white hover:text-sky-400" onclick="toggleMenu()">GitHub</a>
     </div>
 
+    <!-- Section 1: Hero -->
     <section class="relative block w-full">
         <div class="bg-slide" style="background-image: url('images/bg-hero.jpg');"></div>
         <div class="text-center z-10 px-4 max-w-5xl mx-auto flex flex-col justify-center items-center h-full pt-40 md:pt-52 pb-20">
-            
-            <h1 class="text-4xl md:text-7xl font-bold mb-2 tracking-tighter italic uppercase mt-4">JF5.0 <span class="highlight">PQC</span></h1>
-            <p class="text-lg md:text-xl font-light text-slate-200 uppercase tracking-[0.3em] mb-2 drop-shadow-md">Montree JF50</p>
-            <p class="text-white font-mono text-xs tracking-widest bg-sky-600/80 py-1.5 px-5 rounded-full inline-block uppercase shadow-lg mb-8">Absolute Independent Architecture</p>
+
+            <h1 class="text-4xl md:text-7xl font-bold mb-2 tracking-tighter italic uppercase mt-4">Sovereign <span class="highlight">AI Core</span></h1>
+            <p class="text-lg md:text-xl font-light text-slate-200 uppercase tracking-[0.3em] mb-2 drop-shadow-md">Architecture by Montree (ALPHA10)</p>
+            <p class="text-white font-mono text-xs tracking-widest bg-sky-600/80 py-1.5 px-5 rounded-full inline-block uppercase shadow-lg mb-8">V11.3 | 100% Offline-First Edge AI</p>
 
             <div class="bg-slate-950/90 backdrop-blur border-2 border-sky-500 rounded-3xl p-6 md:p-8 max-w-3xl text-left shadow-2xl shadow-sky-500/10 mb-6 w-full">
                 <div class="flex items-center gap-2 text-sky-400 font-mono text-xs md:text-base font-black uppercase tracking-widest mb-3">
-                    <span>👑</span> SOVEREIGN DECLARATION: 100% INDEPENDENT SYSTEM
+                    <span>⚡</span> SYSTEM PARADIGM: SYSTEM 1 VS SYSTEM 2 SEPARATION
                 </div>
                 <div class="text-slate-200 font-normal text-sm md:text-base leading-relaxed space-y-3 font-sans">
                     <p>
-                        The <span class="text-sky-400 font-mono font-bold bg-sky-500/10 px-2 py-0.5 rounded">JF5.0 Ecosystem</span>, 
-                        including all cryptographic layers, algorithmic modules, and structural logic, is envisioned, developed, and owned 
-                        strictly by <span class="text-white font-bold underline decoration-sky-500 decoration-2">Montree (montree.jf50)</span>. 
+                        The <span class="text-sky-400 font-mono font-bold bg-sky-500/10 px-2 py-0.5 rounded">Sovereign Local AI Core</span> 
+                        eliminates LLM hallucinations by pairing a lightweight 2B parameter micro-model (<span class="text-white font-mono">miniNeo7</span>) with ultra-fast deterministic Python tool pipelines.
                     </p>
                     <p class="text-slate-400 text-xs md:text-sm">
-                        This architecture operates with zero corporate affiliation, zero institutional backing, and zero alignment with external entities. It stands as a purely independent monument of sovereign data science and mathematical freedom.
-                    </p>
-                </div>
-            </div>
-
-            <div class="bg-slate-950/85 backdrop-blur border-2 border-amber-500 rounded-3xl p-6 md:p-8 max-w-3xl text-left shadow-2xl shadow-amber-500/10 mb-8 w-full">
-                <div class="flex items-center gap-2 text-amber-400 font-mono text-xs md:text-base font-black uppercase tracking-widest mb-3">
-                    <span>⚠️</span> NOTICE: FOR EDUCATIONAL & RESEARCH PURPOSES ONLY
-                </div>
-                <div class="text-slate-200 font-normal text-sm md:text-base leading-relaxed space-y-3">
-                    <p>
-                        This framework and algorithm architecture are developed strictly for academic evaluation within a <span class="text-sky-400 font-mono font-bold bg-sky-500/10 px-2 py-0.5 rounded">Sandbox Environment</span>. <span class="text-amber-400 font-bold underline">Do not use in production.</span>
-                    </p>
-                    <p>
-                        True production-grade Post-Quantum Cryptography (PQC) standards must always comply with officially validated national security frameworks (such as <span class="text-white font-bold underline decoration-amber-500 decoration-2">NIST FIPS standards</span>) to ensure proper validation and regulatory compliance.
+                        Math, system monitoring, financial pricing, and YouTube metrics are calculated with 100% precision via native code before reaching the language synthesizer.
                     </p>
                 </div>
             </div>
 
             <div class="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
-                <a href="showcase.html" class="px-6 py-2.5 bg-sky-600 hover:bg-sky-500 rounded-full transition text-xs font-bold shadow-lg shadow-sky-500/40 flex items-center justify-center gap-2">
-                    🚀 Explore Showcase
+                <a href="https://github.com/mfreedomx-collab" target="_blank" class="px-6 py-2.5 bg-sky-600 hover:bg-sky-500 rounded-full transition text-xs font-bold shadow-lg shadow-sky-500/40 flex items-center justify-center gap-2">
+                    📂 Explore Repository on GitHub
                 </a>
-                <div class="flex justify-center gap-3">
-                    <a href="https://github.com/mfreedomx-collab" target="_blank" class="px-5 py-2.5 bg-slate-900/80 backdrop-blur border border-white/20 rounded-full hover:bg-white hover:text-black transition text-xs">GitHub</a>
-                    <a href="https://linkedin.com/in/montreejf50" target="_blank" class="px-5 py-2.5 bg-slate-900/80 backdrop-blur border border-white/20 rounded-full hover:bg-white hover:text-black transition text-xs">LinkedIn</a>
-                </div>
             </div>
 
         </div>
     </section>
 
+    <!-- Section 2: Math & Reflex Engine -->
     <section class="relative block w-full py-16">
         <div class="bg-slide" style="background-image: url('images/bg-analysis.jpg');"></div>
         <div class="max-w-7xl w-full mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
             <div class="glass p-10 rounded-[2.5rem]">
-                <h2 class="text-3xl font-bold mb-6 highlight uppercase tracking-tight italic">Unbreakable Randomness</h2>
+                <h2 class="text-3xl font-bold mb-6 highlight uppercase tracking-tight italic">Sub-Millisecond AST Math</h2>
                 <p class="text-slate-200 mb-8 font-light leading-relaxed">
-                    Our <span class="text-sky-400 font-bold">JF5.0 PQC</span> algorithm achieves near-perfect entropy, verified by elite industrial tools. Passing 107 tests in <span class="text-green-400 font-bold">PractRand</span> ensures absolute immunity to quantum-powered statistical attacks.
+                    Heavy exponentiation like <span class="text-sky-400 font-mono font-bold">2^5500</span> (thousands of digits) or complex trigonometric expressions are evaluated directly in a secured Python AST sandbox in <span class="text-green-400 font-mono font-bold">0.0001s</span> without requiring LLM generation.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="bg-black/40 p-6 rounded-2xl border-l-4 border-sky-500">
-                        <p class="text-4xl font-bold font-mono">7.9660</p>
-                        <p class="text-[10px] uppercase tracking-widest text-sky-400 mt-2">Entropy Score (High Mode)</p>
+                        <p class="text-3xl font-bold font-mono">0.0001s</p>
+                        <p class="text-[10px] uppercase tracking-widest text-sky-400 mt-2">Fast AST Latency</p>
                     </div>
                     <div class="bg-black/40 p-6 rounded-2xl border-l-4 border-green-500">
-                        <p class="text-4xl font-bold font-mono text-green-400">107/107</p>
-                        <p class="text-[10px] uppercase tracking-widest text-green-400 mt-2">PractRand Tests Passed</p>
+                        <p class="text-3xl font-bold font-mono text-green-400">100,000</p>
+                        <p class="text-[10px] uppercase tracking-widest text-green-400 mt-2">Max Digit Precision</p>
                     </div>
                 </div>
             </div>
@@ -142,68 +122,71 @@
                         <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
                         <div class="w-2 h-2 bg-green-500 rounded-full"></div>
                     </div>
-                    <span class="text-[9px] uppercase tracking-widest text-gray-400">Sovereign Architecture Log - MONTREE</span>
+                    <span class="text-[9px] uppercase tracking-widest text-gray-400">Alpha10 Core Terminal - Math Evaluation</span>
                 </div>
                 <div class="p-6 font-mono leading-relaxed bg-[#1e1e1e] max-h-[400px] overflow-y-auto custom-scrollbar">
-                    <p><span class="text-[#50fa7b]">montree@SovereignNode</span> <span class="text-[#3b82f6]">~/jf50_core</span></p>
-                    <p class="text-yellow-400">$ ent cipher_v18.bin</p>
-                    <div class="text-gray-300 mb-6 border-l border-gray-700 pl-4">
-Entropy = <span class="text-sky-400">7.966096 bits per byte</span>.
-Optimum compression would reduce size by 0 percent.</div>
-                    <p><span class="text-[#50fa7b]">montree@SovereignNode</span> <span class="text-[#3b82f6]">~/jf50_core/PractRand</span></p>
-                    <p class="text-yellow-400">$ cat cipher_v18_test.bin | ./RNG_test.exe stdin32 -tlmin 8M</p>
-                    <div class="text-gray-300 border-l border-green-700 pl-4">
-RNG_test.exe using PractRand version 0.96
-<span class="text-green-400 font-bold">✅ no anomalies in 107 test result(s)</span>
-[Status: MONITORED BY MASTER MONTREE - AUTHENTICATION VALID]</div>
+                    <p><span class="text-[#50fa7b]">alpha10@SovereignCore</span> <span class="text-[#3b82f6]">~</span></p>
+                    <p class="text-yellow-400">Enter Query: pi+sin(30)+cos(60)+ln 1</p>
+                    <div class="text-gray-300 mb-4 border-l border-gray-700 pl-4">
+⚡ [3D Fly Brain Reflex] State |Ψ⟩: 1.00|INTENT_GENERAL> (0.35ms)<br>
+⚙️ [Math & Simulation Engine] Executed Sandbox Code:<br>
+<span class="text-sky-400">result = math.pi + math.sin(math.radians(30)) + math.cos(math.radians(60)) + math.log(1)</span><br>
+print(result)</div>
+                    <p class="text-green-400">✅ Calculation Result: 4.141592653589793</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Section 3: Live Market & YouTube RAG -->
     <section class="relative block w-full py-16">
         <div class="bg-slide" style="background-image: url('images/bg-iot.jpg');"></div>
         <div class="max-w-6xl w-full mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
             <div class="terminal-green rounded-xl overflow-hidden border border-white/10 text-[10px] md:text-xs">
                 <div class="bg-[#2d2d2d] p-3 flex justify-between items-center px-4">
                     <div class="flex space-x-2"><div class="w-2 h-2 bg-red-500 rounded-full"></div><div class="w-2 h-2 bg-yellow-500 rounded-full"></div><div class="w-2 h-2 bg-green-500 rounded-full"></div></div>
-                    <span class="text-[9px] uppercase tracking-tighter text-slate-400 font-sans">PowerShell - sender.py</span>
+                    <span class="text-[9px] uppercase tracking-tighter text-slate-400 font-sans">Raw Inspection Mode - Tool YouTube & Finance</span>
                 </div>
-                <div class="p-5 font-mono leading-tight bg-[#1e1e1e]">
-                    <p class="text-[#50fa7b]">montree@SovereignNode C:\mdist</p>
-                    <p class="mb-4 text-yellow-400">$ python sender.py</p>
-                    <p class="text-white bg-slate-800 px-2 py-1 inline-block mb-2">Profile: LOW (Small Packet for IoT)</p>
-                    <p class="text-green-400 font-bold">✅ Status: Success</p>
-                    <p>📦 Size: 354 bytes | ⏱️ Time: 35.0497 ms</p>
+                <div class="p-5 font-mono leading-tight bg-[#1e1e1e] max-h-[350px] overflow-y-auto custom-scrollbar">
+                    <p class="text-[#50fa7b]">alpha10@SovereignCore</p>
+                    <p class="text-yellow-400">Query: How many YouTube views does "Linkin Park..." have?</p>
+                    <div class="text-gray-300 my-2 border-l border-sky-500 pl-3">
+🔍 [YouTube Direct Engine] Harvesting URL...<br>
+✅ [Brand-Aligned Match] Linkin Park And Nene Royal...<br>
+<span class="text-green-400">Real-Time Views: 14,567,651 views</span><br>
+Real-Time Likes: 251,520 likes</div>
                 </div>
             </div>
             <div class="glass p-10 rounded-[2.5rem]">
-                <h2 class="text-3xl font-bold mb-6 italic highlight uppercase">IoT Optimization</h2>
-                <p class="text-slate-300 leading-relaxed mb-6">JF5.0 provides a specialized solution for IoT. Our **Low Bandwidth mode** produces a compact 354-byte payload, perfect for restricted networks.</p>
+                <h2 class="text-3xl font-bold mb-6 italic highlight uppercase">Live API Integration</h2>
+                <p class="text-slate-300 leading-relaxed mb-6">
+                    Real-time financial tickers (e.g. Microsoft <span class="text-sky-400 font-mono font-bold">MSFT</span> at $530.61) and exact YouTube view counts are harvested directly via APIs. The 2B model acts strictly as a professional synthesizer, ensuring 0% hallucination on quantitative metrics.
+                </p>
                 <div class="grid grid-cols-2 gap-4">
                     <div class="p-4 bg-sky-500/10 rounded-2xl text-center border border-sky-500/20">
-                        <p class="text-2xl font-bold">35 ms</p>
-                        <p class="text-[10px] uppercase text-sky-400">Latency</p>
+                        <p class="text-2xl font-bold font-mono">Yahoo API</p>
+                        <p class="text-[10px] uppercase text-sky-400">Direct Market Feed</p>
                     </div>
                     <div class="p-4 bg-sky-500/10 rounded-2xl text-center border border-sky-500/20">
-                        <p class="text-2xl font-bold">354 B</p>
-                        <p class="text-[10px] uppercase text-sky-400">Payload</p>
+                        <p class="text-2xl font-bold font-mono">YouTube v3</p>
+                        <p class="text-[10px] uppercase text-sky-400">Real-Time Metrics</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Section 4: Architecture Comparison Table -->
     <section class="relative block w-full py-16">
         <div class="bg-slide" style="background-image: url('images/bg-real.jpg');"></div>
         <div class="max-w-6xl w-full mx-auto px-6 flex flex-col justify-center h-full">
-            
+
             <div class="text-center mb-8">
                 <h2 class="text-4xl md:text-5xl font-bold drop-shadow-lg text-slate-100 uppercase italic tracking-tight">
-                    Quantum vs <span class="highlight">PQC Blueprint</span>
+                    Cloud LLM vs <span class="highlight">Sovereign Core</span>
                 </h2>
                 <p class="text-xs md:text-sm font-mono text-slate-400 uppercase tracking-[0.2em] mt-2">
-                    Architectural Mapping Based on NIST FIPS Standards (Post-Quantum Cryptography)
+                    Architectural Comparison for Edge AI Execution (2B to 26B Scaling)
                 </p>
             </div>
 
@@ -211,109 +194,85 @@ RNG_test.exe using PractRand version 0.96
                 <table class="w-full text-left border-collapse min-w-[600px]">
                     <thead>
                         <tr class="border-b border-white/20 text-sky-400 font-mono text-xs md:text-sm uppercase tracking-wider">
-                            <th class="pb-4 w-1/4">Cryptographic Layer</th>
-                            <th class="pb-4 w-1/3">Legacy (Broken by Quantum)</th>
-                            <th class="pb-4 w-1/3 text-green-400 font-bold">NIST Approved Standard (PQC)</th>
+                            <th class="pb-4 w-1/4">Operational Layer</th>
+                            <th class="pb-4 w-1/3">Monolithic Cloud LLMs</th>
+                            <th class="pb-4 w-1/3 text-green-400 font-bold">Sovereign Local Core (V11.3)</th>
                         </tr>
                     </thead>
                     <tbody class="text-xs md:text-sm font-light text-slate-200 divide-y divide-white/5 font-mono">
                         <tr>
                             <td class="py-4 font-bold text-slate-100 font-sans">
-                                🔑 Key Exchange <br>
-                                <span class="text-[10px] font-normal text-slate-400 uppercase tracking-tighter">(การแลกเปลี่ยนคู่กุญแจ)</span>
+                                📊 Math & Calculation
                             </td>
-                            <td class="py-4 text-red-400/80">ECDHE (X25519, P-256) / RSA-KEM</td>
+                            <td class="py-4 text-red-400/80">Token Estimation (High Hallucination)</td>
                             <td class="py-4 text-green-400 font-medium">
-                                <span class="bg-green-500/10 border border-green-500/30 px-2 py-1 rounded font-bold">ML-KEM</span> (FIPS 203) <br>
-                                <span class="text-[10px] text-slate-400 font-sans block mt-1">*ใช้สร้างและแลกเปลี่ยนความลับเพื่อเริ่มต้นเซสชัน</span>
+                                <span class="bg-green-500/10 border border-green-500/30 px-2 py-1 rounded font-bold">Python AST Sandbox</span> (0.0001s Exact)
                             </td>
                         </tr>
                         <tr>
                             <td class="py-4 font-bold text-slate-100 font-sans">
-                                🔒 Bulk Encryption <br>
-                                <span class="text-[10px] font-normal text-slate-400 uppercase tracking-tighter">(การเข้ารหัสข้อมูลหลัก)</span>
+                                🌐 Real-Time Data RAG
                             </td>
-                            <td class="py-4 text-slate-400">No Change Required (Quantum Safe)</td>
+                            <td class="py-4 text-slate-400">Outdated Training Cutoff / Guesses</td>
                             <td class="py-4 text-sky-400 font-medium">
-                                <span class="bg-sky-500/10 border border-sky-500/30 px-2 py-1 rounded font-bold">AES-GCM (256-bit)</span> <br>
-                                <span class="text-[10px] text-slate-400 font-sans block mt-1">*ใช้กุญแจที่ได้จาก ML-KEM มาวิ่งเข้ารหัสข้อมูลความเร็วสูงต่อไป</span>
+                                <span class="bg-sky-500/10 border border-sky-500/30 px-2 py-1 rounded font-bold">Multi-Query Fan-Out + APIs</span>
                             </td>
                         </tr>
                         <tr>
                             <td class="py-4 font-bold text-slate-100 font-sans">
-                                🖋️ Digital Signature <br>
-                                <span class="text-[10px] font-normal text-slate-400 uppercase tracking-tighter">(ลายเซ็นดิจิทัลยืนยันตัวตน)</span>
+                                🔒 Security & Privacy
                             </td>
-                            <td class="py-4 text-red-400/80">RSA / ECDSA (Ed25519)</td>
-                            <td class="py-4 text-green-400 font-medium space-y-1.5">
-                                <div>
-                                    <span class="bg-green-500/10 border border-green-500/30 px-2 py-0.5 rounded font-bold">ML-DSA</span> (FIPS 204) 
-                                    <span class="text-[10px] text-slate-400 font-sans font-normal">— Primary Standard (Lattice-Based)</span>
-                                </div>
-                                <div class="pt-1">
-                                    <span class="bg-green-500/10 border border-green-500/30 px-2 py-0.5 rounded font-bold">SLH-DSA</span> (FIPS 205) 
-                                    <span class="text-[10px] text-slate-400 font-sans font-normal">— Conservative Backup (Hash-Based)</span>
-                                </div>
+                            <td class="py-4 text-red-400/80">Data sent to external cloud servers</td>
+                            <td class="py-4 text-green-400 font-medium">
+                                <span class="bg-green-500/10 border border-green-500/30 px-2 py-1 rounded font-bold">100% Offline Local Execution</span>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-4">
-                <div class="glass p-5 rounded-2xl text-left border-b-2 border-sky-500">
-                    <h3 class="text-md font-bold mb-2 text-slate-100">Quantum Threat</h3>
-                    <p class="text-xs text-slate-400 font-light leading-relaxed">Shor's algorithm running on a cryptanalytically useful quantum computer will completely break current asymmetric infrastructure (RSA/ECC).</p>
-                </div>
-                <div class="glass p-5 rounded-2xl text-left border-b-2 border-amber-500">
-                    <h3 class="text-md font-bold mb-2 text-slate-100">Math Foundation</h3>
-                    <p class="text-xs text-slate-400 font-light leading-relaxed">NIST PQC standards leverage hard mathematical problems like Lattice Cryptography (LWE) and Spherical Trees that are secure against both classical and quantum computers.</p>
-                </div>
-                <div class="glass p-5 rounded-2xl text-left border-b-2 border-green-500">
-                    <h3 class="text-md font-bold mb-2 text-slate-100">Implementation Scope</h3>
-                    <p class="text-xs text-slate-400 font-light leading-relaxed">This sandbox environment demonstrates integration patterns and entropy verification. Production deployment must always use NIST certified crypto modules.</p>
-                </div>
-            </div>
-
         </div>
     </section>
 
+    <!-- Section 5: The Trinity -->
     <section class="relative block w-full py-16">
         <div class="bg-slide" style="background-image: url('images/bg-edu.jpg');"></div>
         <div class="max-w-6xl w-full mx-auto px-6 text-center">
-            <h2 class="text-5xl font-bold mb-12 drop-shadow-lg text-slate-100 uppercase italic">Quantum vs PQC</h2>
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 drop-shadow-lg text-slate-100 uppercase italic">The Sovereign Trinity</h2>
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="glass p-8 rounded-3xl text-left border-b-4 border-sky-500">
-                    <h3 class="text-xl font-bold mb-4">Quantum Computers</h3>
-                    <p class="text-sm text-slate-300 font-light">Machines that use Qubits to break standard encryption like RSA/ECC using Shor's algorithm.</p>
+                    <h3 class="text-xl font-bold mb-4">3D Connectome Reflex</h3>
+                    <p class="text-sm text-slate-300 font-light">Advanced intent routing that triggers precise local tools in milliseconds with zero latency overhead.</p>
                 </div>
                 <div class="glass p-8 rounded-3xl text-left border-b-4 border-yellow-500">
-                    <h3 class="text-xl font-bold mb-4">LWE + AES-256</h3>
-                    <p class="text-sm text-slate-300 font-light">The core core architecture uses Learning With Errors (LWE), a profound mathematical framework impervious to quantum-level decryption attacks.</p>
+                    <h3 class="text-xl font-bold mb-4">Deterministic Guard</h3>
+                    <p class="text-sm text-slate-300 font-light">Isolates sensitive tasks (Vault encryption, system metrics) from public web searches and history logs.</p>
                 </div>
                 <div class="glass p-8 rounded-3xl text-left border-b-4 border-green-500">
-                    <h3 class="text-xl font-bold mb-4">Sovereign Vibe</h3>
-                    <p class="text-sm text-slate-300 font-light">Forged outside the constraints of traditional legacy institutions. We maintain absolute autonomy over our source code deployment vectors.</p>
+                    <h3 class="text-xl font-bold mb-4">Model-Agnostic Scale</h3>
+                    <p class="text-sm text-slate-300 font-light">Built on 2B parameters for local speed, ready to scale up to 12B or 26B models instantly as hardware evolves.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Section 6: Contact -->
     <section class="relative block w-full py-16">
         <div class="bg-slide" style="background-image: url('images/bg-contact.jpg');"></div>
         <div class="glass p-12 rounded-[3rem] text-center max-w-2xl mx-auto border border-white/20">
             <h2 class="text-4xl font-bold mb-4 uppercase italic">Sovereign Channel</h2>
-            <p class="text-slate-300 mb-10 font-light">Direct communications path to the sole architect of the JF5.0 system.</p>
+            <p class="text-slate-300 mb-10 font-light">Direct communications path to the sole architect of the Sovereign AI Core.</p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
                 <a href="https://github.com/mfreedomx-collab" target="_blank" class="bg-slate-900/90 hover:bg-sky-600 p-4 rounded-2xl transition font-bold border border-white/10">GitHub Space</a>
                 <a href="mailto:montree.jf50@gmail.com" class="bg-sky-600 hover:bg-sky-500 p-4 rounded-2xl transition font-bold shadow-lg shadow-sky-500/40">Secure Email</a>
             </div>
             <div class="mt-16 pt-8 border-t border-white/10">
-                <p class="text-[10px] text-slate-500 uppercase tracking-[0.5em]">© 2026 MONTREE JF50 | ALL RIGHTS RESERVED | SOLITARY SOVEREIGN ENTITY</p>
+                <p class="text-[10px] text-slate-500 uppercase tracking-[0.5em]">© 2026 MONTREE JF50 | SOVEREIGN LOCAL AI CORE V11.3 | ALL RIGHTS RESERVED</p>
             </div>
         </div>
     </section>
 
+    <!-- Script -->
     <script>
         const burgerTrigger = document.getElementById('hamburger-trigger');
         const closeMenuBtn = document.getElementById('close-menu-btn');
@@ -321,7 +280,7 @@ RNG_test.exe using PractRand version 0.96
 
         function toggleMenu() {
             mobileMenu.classList.toggle('hidden-menu');
-            document.body.classList.toggle('overflow-hidden'); // บล็อกไม่ให้หน้าจอหลักเลื่อนตอนกางเมนู
+            document.body.classList.toggle('overflow-hidden');
         }
 
         if(burgerTrigger) burgerTrigger.addEventListener('click', toggleMenu);
