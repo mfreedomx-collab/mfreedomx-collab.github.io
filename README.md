@@ -1,39 +1,32 @@
-# 🛡️ JF5.0 CORE ECOSYSTEM - v12e
+# 🤖 SOVEREIGN LOCAL AI CORE (JF5.0 Architecture)
 
-### "Securing the Future with Post-Quantum Cryptography"
+### "Transparent, Offline-First, and Deterministic AI Agent Execution"
 
-This repository contains the **Official Showcase Architecture** for the JF5.0 Ecosystem. 
-Developed by **Montree (ALPHA10)** in collaboration with **Private AI Partner**.
+This repository showcases the official architecture of **Sovereign Local AI Core V11.3**, designed and developed independently by **Montree (ALPHA10)**. 
+
+The core philosophy of this project is to eliminate LLM hallucinations by coupling small-scale language models (such as 2B parameter micro-models) with sub-millisecond deterministic Python execution engines.
+
+---
+
+## ⚙️ Core Architectural Principles
+
+- **System 1 vs System 2 Separation:** Mathematical computations, system hardware profiling, and real-time API harvesting (Yahoo Finance, YouTube Data API) are handled by deterministic Python code (`0.0001s` AST evaluation), leaving the local LLM strictly as an advanced semantic synthesizer.
+- **Raw Data Inspection Mode (Garbage-In Guard):** Complete transparency over tool inputs and outputs before feeding context to the model, ensuring absolute auditability.
+- **Zero-Cloud Isolation:** Operates 100% locally via Ollama. No telemetry, no external data leakage, and sovereign control over runtime environments.
 
 ---
 
-## ⚠️ Intellectual Property Notice
-The design, layout, and visual identity of this project are the result of intensive R&D. 
+## 🚀 Key Modules & Components
 
-- **Core Logic:** Powered by the **JF5.0 Proprietary PQC Engine**. All cryptographic formulas and internal logic are private and are not included in this public repository.
-- **Frontend:** This UI/UX is built with HTML/TailwindCSS specifically for architectural demonstration.
-- — Vibe Coding Man 
-My IP 
-- 1 Fast ECC Hybrid X25519 + Random Salt in RAM + AES
-Pre-Emptive Quantum Resistant 
-- 2 Fast PQC Hybrid X25519 + MLKEM768 +AES
-- 3 JF5.0 Ecosystem
-
-> *"You can clone the code, but you cannot clone the soul of JF5.0."*
-
-## 🚀 Key Features Demonstrated
-- **Post-Quantum Randomization:** Achieved near-perfect entropy (7.x+ Score).
-- **Ghost Protocol:** Implementation of Secure Secret Sharing (SSS) mechanisms.
-- **Quantum Resistance:** Advanced security concepts designed for the Post-Quantum era.
+1. **3D Drosophila Connectome Reflex Engine:** Fast intent classification using spatial spiking neural logic (`INTENT_NUMERICAL`, `INTENT_MARKET`, `INTENT_YOUTUBE`, `INTENT_SYSTEM`).
+2. **Fast AST Math Engine:** Bypasses LLM token limits and calculation errors by evaluating big-number arithmetic directly in a secured sandbox.
+3. **Hybrid RAG & API Routers:** Real-time financial asset resolution via Central Dictionary + Yahoo Finance API, paired with brand-aligned YouTube view counting.
+4. **Golden Template Web App Assembler:** Secure micro-app generator backed by a Python supervisor and pre-verified UI templates.
 
 ---
----
-📰 Current Focus: This project serves as a foundational milestone in my deep tech journey. I have pivoted my main focus toward Deep Tech Journalism & AI Analysis, using this technical background to decode and report on next-generation security and AI infrastructures for the tech community.
 
-## NOTICE: FOR EDUCATIONAL & RESEARCH PURPOSES ONLY
+## ⚠️ NOTICE: FOR RESEARCH & EDUCATIONAL PURPOSES ONLY
 
-This framework and algorithm architecture are developed strictly for academic evaluation within a Sandbox Environment. Do not use in production.
+This framework is developed strictly for architectural evaluation and research within a local sandbox environment. 
 
-True production-grade Post-Quantum Cryptography (PQC) standards must always comply with officially validated national security frameworks (such as NIST FIPS standards) to ensure proper validation and regulatory compliance.
-
-© 2026 JF5.0 PQC ECOSYSTEM | SECURED BY PROPRIETARY DESIGN | v12e
+© 2026 MONTREE JF50 | SOVEREIGN LOCAL AI CORE | ALL RIGHTS RESERVED
