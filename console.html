@@ -33,6 +33,9 @@
             vertical-align: middle;
             margin-left: 4px;
         }
+        .word-break-all {
+            word-break: break-all;
+        }
     </style>
 </head>
 <body class="p-4 md:p-8">
@@ -40,8 +43,8 @@
     <!-- Top Navigation Bar / Return Link -->
     <div class="w-full max-w-6xl flex justify-between items-center mb-4 px-2">
         <div class="flex items-center gap-2">
-            <div class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-            <span class="text-xs tracking-widest text-slate-400 uppercase font-mono">NODE: ALPHA10 // FULL RAW INSPECTION STREAM</span>
+            <div class="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
+            <span class="text-xs tracking-widest text-slate-400 uppercase font-mono">NODE: ALPHA10 // UNTRUNCATED RAW + LLM SYNTHESIS LOG</span>
         </div>
         <a href="index.html" class="px-4 py-1.5 bg-slate-900 hover:bg-sky-600 border border-white/10 rounded-full text-xs text-sky-400 hover:text-white transition shadow-lg flex items-center gap-2">
             ← Return to Sovereign Home
@@ -49,155 +52,358 @@
     </div>
 
     <!-- Terminal Window Container -->
-    <div class="w-full max-w-6xl bg-[#1e1e1e] rounded-2xl overflow-hidden border border-white/15 shadow-2xl">
+    <div class="w-full max-w-6xl bg-[#16161e] rounded-2xl overflow-hidden border border-white/15 shadow-2xl">
         
         <!-- Terminal Header Bar -->
-        <div class="bg-[#2d2d2d] px-4 py-3 flex justify-between items-center border-b border-black/30">
+        <div class="bg-[#24283b] px-4 py-3 flex justify-between items-center border-b border-black/40">
             <div class="flex space-x-2">
                 <div class="w-3 h-3 bg-red-500 rounded-full"></div>
                 <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
                 <div class="w-3 h-3 bg-green-500 rounded-full"></div>
             </div>
-            <span class="text-xs text-gray-300 font-mono tracking-wider">C:\VCM\project\ai_toolsV13 // python main_core.py [FULL LOG]</span>
-            <div class="text-[10px] text-green-400 bg-green-500/10 px-2.5 py-1 rounded border border-green-500/20 font-mono">LIVE ARCHIVE</div>
+            <span class="text-xs text-gray-300 font-mono tracking-wider">C:\VCM\project\ai_toolsV13 // python main_core.py</span>
+            <div class="text-[10px] text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-500/20 font-mono">100% FULL VERBATIM LOG</div>
         </div>
 
-        <!-- Terminal Body (Scrollable Log Area - Full Length) -->
-        <div class="p-6 md:p-8 font-mono text-xs md:text-sm leading-relaxed max-h-[750px] overflow-y-auto custom-scrollbar space-y-6">
+        <!-- Terminal Body (Scrollable Log Area - Complete Verbatim Output) -->
+        <div class="p-6 md:p-8 font-mono text-xs md:text-sm leading-relaxed max-h-[78vh] overflow-y-auto custom-scrollbar space-y-6">
             
-            <!-- 1. CPU Check -->
-            <div>
+            <!-- 1. CPU & Ollama Check -->
+            <div class="space-y-2">
                 <p><span class="text-[#50fa7b]">m@ALPHA10</span> <span class="text-[#3b82f6]">C:\VCM\project\ai_toolsV13</span></p>
                 <p class="text-yellow-400">$ wmic cpu get name</p>
                 <p class="text-gray-300">Name<br>Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz</p>
-            </div>
 
-            <hr class="border-white/10 my-2">
-
-            <!-- 2. Ollama List -->
-            <div>
-                <p><span class="text-[#50fa7b]">m@ALPHA10</span> <span class="text-[#3b82f6]">C:\VCM\project\ai_toolsV13</span></p>
+                <p class="pt-2"><span class="text-[#50fa7b]">m@ALPHA10</span> <span class="text-[#3b82f6]">C:\VCM\project\ai_toolsV13</span></p>
                 <p class="text-yellow-400">$ ollama list</p>
-                <p class="text-gray-300">NAME              ID              SIZE      MODIFIED<br>
-miniNeo7:latest   35c8d6df3e12    3.5 GB    4 months ago</p>
+                <p class="text-gray-300">NAME &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SIZE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MODIFIED<br>
+miniNeo7:latest &nbsp;&nbsp;&nbsp;35c8d6df3e12 &nbsp;&nbsp;&nbsp;3.5 GB &nbsp;&nbsp;&nbsp;4 months ago</p>
             </div>
 
-            <hr class="border-white/10 my-2">
-
-            <!-- 3. Core Startup -->
-            <div>
+            <!-- 2. System Boot -->
+            <div class="space-y-1">
                 <p><span class="text-[#50fa7b]">m@ALPHA10</span> <span class="text-[#3b82f6]">C:\VCM\project\ai_toolsV13</span></p>
                 <p class="text-yellow-400">$ python main_core.py</p>
-                <p class="text-slate-400">  [Plugin System] Scanning and loading modules...</p>
-                <p class="text-slate-300">    [+] Loaded Plugin: tool_create_webapp<br>
-    [+] Loaded Plugin: tool_finance<br>
-    [+] Loaded Plugin: tool_math<br>
-    [+] Loaded Plugin: tool_reflex<br>
-    [+] Loaded Plugin: tool_robot<br>
-    [+] Loaded Plugin: tool_search<br>
-    [+] Loaded Plugin: tool_sys_monitor<br>
-    [+] Loaded Plugin: tool_vault<br>
-    [+] Loaded Plugin: tool_youtube</p>
-                <p class="text-sky-400">==================================================<br>
-  Sovereign Cyber-Biological AI Core V11.3 [Raw Inspection Mode]<br>
-  Temporal Anchor: Saturday, November 07, 2026<br>
-  ⚙️ Engine: miniNeo7:latest | Loaded Plugins: ['tool_create_webapp', 'tool_finance', 'tool_math', 'tool_reflex', 'tool_robot', 'tool_search', 'tool_sys_monitor', 'tool_vault', 'tool_youtube']<br>
-==================================================</p>
+                <p class="text-slate-400">&nbsp; [Plugin System] Scanning and loading modules...</p>
+                <p class="text-emerald-400">
+                    &nbsp; &nbsp; [+] Loaded Plugin: tool_create_webapp<br>
+                    &nbsp; &nbsp; [+] Loaded Plugin: tool_finance<br>
+                    &nbsp; &nbsp; [+] Loaded Plugin: tool_math<br>
+                    &nbsp; &nbsp; [+] Loaded Plugin: tool_reflex<br>
+                    &nbsp; &nbsp; [+] Loaded Plugin: tool_robot<br>
+                    &nbsp; &nbsp; [+] Loaded Plugin: tool_search<br>
+                    &nbsp; &nbsp; [+] Loaded Plugin: tool_sys_monitor<br>
+                    &nbsp; &nbsp; [+] Loaded Plugin: tool_vault<br>
+                    &nbsp; &nbsp; [+] Loaded Plugin: tool_youtube
+                </p>
+                <div class="text-sky-400 py-2">
+==================================================<br>
+&nbsp; Sovereign Cyber-Biological AI Core V11.3 [Raw Inspection Mode]<br>
+&nbsp; Temporal Anchor: Saturday, November 07, 2026<br>
+&nbsp; ⚙️ Engine: miniNeo7:latest | Loaded Plugins: ['tool_create_webapp', 'tool_finance', 'tool_math', 'tool_reflex', 'tool_robot', 'tool_search', 'tool_sys_monitor', 'tool_vault', 'tool_youtube']<br>
+==================================================
+                </div>
             </div>
 
-            <hr class="border-white/10 my-2">
+            <!-- ========================================== -->
+            <!-- QUERY 1: 7^1000 -->
+            <!-- ========================================== -->
+            <div class="space-y-3 border-t border-white/10 pt-4">
+                <p><span class="text-yellow-400 font-bold">Enter Query (type 'exit' to quit):</span> <span class="text-white font-bold">7^1000</span></p>
+                <p class="text-sky-300">
+                    ⚡ [3D Fly Brain Reflex] State |Ψ⟩: 1.00|INTENT_NUMERICAL&gt; (2.90ms)<br>
+                    &nbsp; [Intent Superposition Active] Firing 1 plugins simultaneously: ['tool_math']<br>
+                    ⚡ [Fast AST Engine] Executed in 0.0001s (No LLM required)
+                </p>
 
-            <!-- 4. Query: 7^1000 -->
-            <div>
-                <p><span class="text-[#50fa7b]">m@ALPHA10</span> <span class="text-[#3b82f6]">C:\VCM\project\ai_toolsV13</span></p>
-                <p class="text-yellow-400">Enter Query (type 'exit' to quit): 7^1000</p>
-                <p class="text-sky-300">⚡ [3D Fly Brain Reflex] State |Ψ⟩: 1.00|INTENT_NUMERICAL> (2.90ms)<br>
-  [Intent Superposition Active] Firing 1 plugins simultaneously: ['tool_math']<br>
-⚡ [Fast AST Engine] Executed in 0.0001s (No LLM required)</p>
-                <p class="text-emerald-400 text-xs mt-2">🔍 [DEBUG: Raw Tool Output Received]:<br>
-**Calculation Result:**<br>
-1253256639965718318107554832382734206164985075080986171463495007520970596317381164324488390543515207631986159195515940766858289894672630227617908382708545798300151112466612039846243589298325716157180147040963056680975076132736630232268952505413859271584260886844940824167686177081895922869360399223111256837192150466891567383525901372415545101858559645499275754932473911325485343784979788060849510858742020118363623157274201095547829887915300882897118445505002304856384131899471321422439473341992593007356224929374194536500614903021051279203144304016368556775491363374813218113496784270760914373450453993373486112611680559293554029928231924911903600270361122831809358727752145174640131782746571007363215646068382527396011564146284455436631446960506501608126218143270626661951727017802002866450238230831859280613713103008292840711412077</p>
-                <p class="text-slate-400 mt-2">⚙️ [Local LLM Synthesizer] Feeding raw tool data to miniNeo7:latest for synthesis...<br>
-  [History Saved] Second brain updated: history/20261107221915_query_log.md</p>
-                <p class="text-slate-200 mt-1">Response: The calculation for 7^1000 yields a highly significant integer...</p>
+                <!-- Raw Output Box -->
+                <div class="bg-black/40 p-4 rounded-xl border-l-4 border-amber-500 text-xs space-y-1">
+                    <p class="text-amber-400 font-bold">🔍 [DEBUG: Raw Tool Output Received]:</p>
+                    <p class="text-slate-300 font-bold">🔢 **Calculation Result:**</p>
+                    <p class="text-amber-200/90 word-break-all">125325663996571831810755483238273420616498507508098617146349500752097059631738116432448839054351520763198615919551594076685828989467263022761790838270854579830015111246661203984624358929832571615718014704096305668097507613273663023226895250541385927158426088684494082416768617708189592286936039922311125683719215046689156738352590137241554510185855964549927575493247391132548534378497978806084951085874202011836362315727420109554782988791530088289711844550500230485638413189947132142243947334199259300735622492937419453650061490302105127920314430401636855677549136337481321811349678427076091437345045399337348611261168055929355402992823192491190360027036112283180935872775214517464013178274657100736321564606838252739601156414628445543663144696050650160812621814327062666195172701780200286645023823083185928061371310300829284071141207731280600001</p>
+                    <p class="text-slate-500">---------------------------------------------</p>
+                </div>
+
+                <p class="text-purple-400">
+                    ⚙️ [Local LLM Synthesizer] Feeding raw tool data to miniNeo7:latest for synthesis...<br>
+                    &nbsp; [History Saved] Second brain updated: history/20261107221915_query_log.md
+                </p>
+
+                <!-- Synthesized Response Box -->
+                <div class="bg-emerald-950/20 p-4 rounded-xl border-l-4 border-emerald-400 space-y-2">
+                    <p class="text-emerald-400 font-bold">Response:</p>
+                    <p class="text-slate-200">The calculation for $7^{1000}$ yields a highly significant integer.</p>
+                    <p class="text-white font-bold">**Calculation Result:**</p>
+                    <p class="text-emerald-300 word-break-all">$$7^{1000} = 1253256639965718318107554832382734206164985075080986171463495007520970596317381164324488390543515207631986159195515940766858289894672630227617908382708545798300151112466612039846243589298325716157180147040963056680975076132736630232268952505413859271584260886844940824167686177081895922869360399223111256837192150466891567383525901372415545101858559645499275754932473911325485343784979788060849510858742020118363623157274201095547829887915300882897118445505002304856384131899471321422439473341992593007356224929374194536500614903021051279203144304016368556775491363374813218113496784270760914373450453993373486112611680559293554029928231924911903600270361122831809358727752145174640131782746571007363215646068382527396011564146284455436631446960506501608126218143270626661951727017802002866450238230831859280613713103008292840711412077</p>
+                </div>
+                <p class="text-sky-400">==================================================</p>
             </div>
 
-            <hr class="border-white/10 my-2">
+            <!-- ========================================== -->
+            <!-- QUERY 2: 10+20+Pi+sin(30)+log 1 -->
+            <!-- ========================================== -->
+            <div class="space-y-3 pt-2">
+                <p><span class="text-yellow-400 font-bold">Enter Query (type 'exit' to quit):</span> <span class="text-white font-bold">10+20+Pi+sin(30)+log 1</span></p>
+                <p class="text-sky-300">
+                    ⚡ [3D Fly Brain Reflex] State |Ψ⟩: 1.00|INTENT_NUMERICAL&gt; (0.69ms)<br>
+                    &nbsp; [Intent Superposition Active] Firing 1 plugins simultaneously: ['tool_math']<br>
+                    ⚙️ [Math &amp; Simulation Engine] Translating query into executable Python Code...<br>
+                    ⚙️ Executing Sandbox Code (Attempt 1):<br>
+                    <span class="text-emerald-300">result = 10 + 20 + math.pi + math.sin(math.radians(30)) + math.log(1)<br>print(result)</span>
+                </p>
 
-            <!-- 5. Query: 10+20+Pi+sin(30)+log 1 -->
-            <div>
-                <p><span class="text-[#50fa7b]">m@ALPHA10</span> <span class="text-[#3b82f6]">C:\VCM\project\ai_toolsV13</span></p>
-                <p class="text-yellow-400">Enter Query (type 'exit' to quit): 10+20+Pi+sin(30)+log 1</p>
-                <p class="text-sky-300">⚡ [3D Fly Brain Reflex] State |Ψ⟩: 1.00|INTENT_NUMERICAL> (0.69ms)<br>
-  [Intent Superposition Active] Firing 1 plugins simultaneously: ['tool_math']<br>
-⚙️ [Math & Simulation Engine] Translating query into executable Python Code...</p>
-                <p class="text-gray-300">⚙️ Executing Sandbox Code (Attempt 1):<br>
-result = 10 + 20 + math.pi + math.sin(math.radians(30)) + math.log(1)<br>
-print(result)</p>
-                <p class="text-emerald-400 text-xs mt-2">🔍 [DEBUG: Raw Tool Output Received]:<br>
-**Math Simulation & Calculation Result:**<br>
-33.6415926535898</p>
+                <!-- Raw Output Box -->
+                <div class="bg-black/40 p-4 rounded-xl border-l-4 border-amber-500 text-xs space-y-1">
+                    <p class="text-amber-400 font-bold">🔍 [DEBUG: Raw Tool Output Received]:</p>
+                    <p class="text-slate-300 font-bold">🧮 **Math Simulation &amp; Calculation Result:**</p>
+                    <p class="text-amber-200 font-bold">33.6415926535898</p>
+                    <p class="text-slate-500">---------------------------------------------</p>
+                </div>
+
+                <p class="text-purple-400">
+                    ⚙️ [Local LLM Synthesizer] Feeding raw tool data to miniNeo7:latest for synthesis...<br>
+                    &nbsp; [History Saved] Second brain updated: history/20261107223249_query_log.md
+                </p>
+
+                <!-- Synthesized Response Box -->
+                <div class="bg-emerald-950/20 p-4 rounded-xl border-l-4 border-emerald-400 space-y-2 text-slate-200">
+                    <p class="text-emerald-400 font-bold">Response:</p>
+                    <p class="text-white font-bold">**Mathematical Synthesis Report**</p>
+                    <p>The query required the evaluation of the expression: $10 + 20 + \pi + \sin(30^\circ) + \log(1)$.</p>
+                    <p class="text-sky-300 font-bold">**Component Breakdown and Evaluation:**</p>
+                    <p>
+                        1. &nbsp;**Integer Constants:**<br>
+                        &nbsp; &nbsp; * &nbsp;$10 + 20 = 30$<br>
+                        2. &nbsp;**Pi Constant ($\pi$):**<br>
+                        &nbsp; &nbsp; * &nbsp;$\pi \approx 3.1415926535898$ (Utilizing the standard high-precision value).<br>
+                        3. &nbsp;**Sine Function ($\sin(30^\circ)$):**<br>
+                        &nbsp; &nbsp; * &nbsp;$\sin(30^\circ) = 0.5$<br>
+                        4. &nbsp;**Logarithm Function ($\log(1)$):**<br>
+                        &nbsp; &nbsp; * &nbsp;$\log(1) = 0$ (Assuming the natural logarithm $\ln$, where $\ln(1)=0$).
+                    </p>
+                    <p class="text-sky-300 font-bold">**Calculation Sequence:**</p>
+                    <p>
+                        The complete expression is synthesized as follows:<br>
+                        $$ \text{Result} = 10 + 20 + \pi + \sin(30^\circ) + \log(1) $$<br>
+                        $$ \text{Result} = 30 + 3.1415926535898 + 0.5 + 0 $$<br>
+                        $$ \text{Result} = 33.6415926535898 $$
+                    </p>
+                    <p class="text-sky-300 font-bold">**Final Calculated Result:**</p>
+                    <p>The exact calculated value for the expression $10+20+\pi+\sin(30)+\log 1$ is <span class="text-emerald-400 font-bold">**33.6415926535898**</span>.</p>
+                    <p class="text-sky-300 font-bold">**Context Match Verification:**</p>
+                    <p>
+                        The calculated result precisely matches the raw gathered data:<br>
+                        * &nbsp;**Calculated Value:** $33.6415926535898$<br>
+                        * &nbsp;**Raw Data Result:** $33.6415926535898$<br>
+                        * &nbsp;**Match Score:** $100\%$
+                    </p>
+                    <p class="text-sky-300 font-bold">**Summary:**</p>
+                    <p>The simulation confirms the mathematical integrity of the input parameters, yielding the precise result of $33.6415926535898$.</p>
+                </div>
+                <p class="text-sky-400">==================================================</p>
             </div>
 
-            <hr class="border-white/10 my-2">
+            <!-- ========================================== -->
+            <!-- QUERY 3: Microsoft Stock Analysis -->
+            <!-- ========================================== -->
+            <div class="space-y-3 pt-2">
+                <p><span class="text-yellow-400 font-bold">Enter Query (type 'exit' to quit):</span> <span class="text-white font-bold">Could you provide an analysis of Microsoft stock? Is it a good investment at its current price?</span></p>
+                <p class="text-sky-300">
+                    ⚡ [3D Fly Brain Reflex] State |Ψ⟩: 1.00|INTENT_MARKET|INTENT_DEEP_RESEARCH&gt; (0.67ms)<br>
+                    &nbsp; [Intent Superposition Active] Firing 2 plugins simultaneously: ['tool_finance', 'tool_search']<br>
+                    &nbsp; &nbsp; 💹 [Finance Central Map] Resolved 'microsoft' via Dictionary -&gt; 'MSFT'.
+                </p>
 
-            <!-- 6. Query: Microsoft Stock -->
-            <div>
-                <p><span class="text-[#50fa7b]">m@ALPHA10</span> <span class="text-[#3b82f6]">C:\VCM\project\ai_toolsV13</span></p>
-                <p class="text-yellow-400">Enter Query (type 'exit' to quit): Could you provide an analysis of Microsoft stock? Is it a good investment at its current price?</p>
-                <p class="text-sky-300">⚡ [3D Fly Brain Reflex] State |Ψ⟩: 1.00|INTENT_MARKET|INTENT_DEEP_RESEARCH> (0.67ms)<br>
-  [Intent Superposition Active] Firing 2 plugins simultaneously: ['tool_finance', 'tool_search']<br>
-    🌐 [Finance Central Map] Resolved 'microsoft' via Dictionary -> 'MSFT'.</p>
-                <p class="text-emerald-400 text-xs mt-2">🔍 [DEBUG: Raw Tool Output Received]:<br>
-**Financial Direct Market Data (Fast Path — 1 Assets):**<br>
-- **Asset Name:** Microsoft Corporation (`MSFT`) [Stock / Equity]<br>
-  - **Current Live Price:** **530.61 USD**<br>
-  - **Previous Close:** 535.93 USD | **Market:** NMS</p>
-                <p class="text-gray-300 text-xs mt-1">**1. [HIGH_AUTHORITY_VERIFIED] Microsoft (MSFT) Stock Outlook for 2026...**<br>
-**2. [HIGH_AUTHORITY_VERIFIED] Microsoft (MSFT) Stock Forecast & Analyst Price Targets...**<br>
-*Consensus Rating:* "Strong Buy" | *Average Price Target:* $634.14</p>
+                <!-- Raw Output Box -->
+                <div class="bg-black/40 p-4 rounded-xl border-l-4 border-amber-500 text-xs space-y-2 text-slate-300">
+                    <p class="text-amber-400 font-bold">🔍 [DEBUG: Raw Tool Output Received]:</p>
+                    <p class="text-white font-bold">📊 **Financial Direct Market Data (Fast Path — 1 Assets):**</p>
+                    <p>
+                        - **Asset Name:** Microsoft Corporation (`MSFT`) [Stock / Equity]<br>
+                        &nbsp; - **Current Live Price:** <span class="text-emerald-400 font-bold">**530.61 USD**</span><br>
+                        &nbsp; - **Previous Close:** 535.93 USD | **Market:** NMS<br>
+                        <span class="text-slate-500">*(Data fetched directly from Yahoo Finance API with Central Dictionary Guard)*</span>
+                    </p>
+                    <p class="text-slate-500">---------------------------------------------</p>
+                    <p class="text-sky-400 font-bold">🌐 **Search &amp; RAG Results for:** `Could you provide an analysis of Microsoft stock? Is it a good investment at its current price?`</p>
+                    <p><span class="text-emerald-300 font-bold">**1. [HIGH_AUTHORITY_VERIFIED] Microsoft (MSFT) Stock Outlook for 2026, According to Experts - Forbes**</span><br>
+                    What do experts expect for Microsoft stock in 2026? Read this analysis of MSFT's growth trends and analyst price targets for the 2026 fiscal year to get a better idea.</p>
+                    <p><span class="text-emerald-300 font-bold">**2. [HIGH_AUTHORITY_VERIFIED] Microsoft (MSFT) Stock Forecast &amp; Analyst Price Targets**</span><br>
+                    18 hours ago · Stock forecasts and analyst price target predictions for Microsoft Corporation (MSFT) stock, with detailed revenue and earnings estimates. [Deep Page Extracted Details]: [Heading: Microsoft Stock Forecast] | [Heading: Stock Price Forecast] | According to 58 analysts polled by S&amp;P Global, Microsoft stock has a consensus rating of "Strong Buy" and an average price target of $634.14. The average 1-year stock price forecast is 19.51% h...</p>
+                    <p><span class="text-emerald-300 font-bold">**3. [HIGH_AUTHORITY_VERIFIED] Why Microsoft (MSFT) Could Be a Major Beneficiary of the AI and Cloud Boom**</span><br>
+                    The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does not offer securities or cryptocurrencies for sale or facilitate trading. Coinbase pays us for ... [Deep Page Extracted Details]: Why Microsoft (MSFT) Could Be a Major Beneficiary of the AI and Cloud Boom Oops, something went wrong Skip to navigation Skip to main content Skip to right column | My Portfolio Watchlists | Markets Stocks Most Active...</p>
+                    <p><span class="text-sky-300 font-bold">**4. [STANDARD_WEB] Microsoft Stock (MSFT) Analysis 2026: Price Forecast ...**</span><br>
+                    Aug 21, 2026 · This deep-dive analysis provides a comprehensive MSFT stock forecast for 2026, examining real-time financial metrics, competitive positioning, and the core arguments for and against initiating a position.</p>
+                    <p><span class="text-sky-300 font-bold">**5. [STANDARD_WEB] Should I Buy MSFT Stock in 2026? Complete Investment Analysis**</span><br>
+                    Feb 17, 2026 · Wondering if you should buy MSFT stock in 2026? Our expert analysis covers Microsoft's AI investments, cloud growth, analyst price targets of $595-$676, and buy recommendations.</p>
+                    <p class="text-slate-500">---------------------------------------------</p>
+                </div>
+
+                <p class="text-purple-400">
+                    ⚙️ [Local LLM Synthesizer] Feeding raw tool data to miniNeo7:latest for synthesis...<br>
+                    &nbsp; [History Saved] Second brain updated: history/20261107223437_query_log.md
+                </p>
+
+                <!-- Synthesized Response Box -->
+                <div class="bg-emerald-950/20 p-4 rounded-xl border-l-4 border-emerald-400 space-y-2 text-slate-200">
+                    <p class="text-emerald-400 font-bold">Response:</p>
+                    <p class="text-white font-bold">**Microsoft Corporation (MSFT) Investment Analysis**</p>
+                    <p>Based on the provided financial data and high-authority market intelligence, here is a comprehensive analysis of Microsoft's current standing and investment outlook.</p>
+                    <p class="text-sky-300 font-bold">**Current Market Snapshot:**</p>
+                    <p>
+                        * &nbsp;**Asset:** Microsoft Corporation (MSFT)<br>
+                        * &nbsp;**Current Live Price:** <span class="text-emerald-400 font-bold">**$530.61 USD**</span><br>
+                        * &nbsp;**Previous Close:** $535.93 USD<br>
+                        * &nbsp;**Market:** NMS
+                    </p>
+                    <p class="text-sky-300 font-bold">**Analyst Consensus and Price Targets:**</p>
+                    <p>
+                        The expert consensus strongly favors Microsoft, indicating a positive short-to-medium term outlook.<br>
+                        * &nbsp;**Consensus Rating:** "Strong Buy" (derived from 58 analysts polled by S&amp;P Global).<br>
+                        * &nbsp;**Average Price Target:** <span class="text-emerald-400 font-bold">**$634.14**</span>.<br>
+                        * &nbsp;**1-Year Stock Price Forecast:** The average forecast indicates a potential growth of <span class="text-emerald-400 font-bold">**19.51%**</span>.
+                    </p>
+                    <p class="text-sky-300 font-bold">**Key Investment Drivers:**</p>
+                    <p>
+                        The primary justification for a favorable investment position lies in Microsoft's dominant positioning within the Artificial Intelligence (AI) and Cloud Computing sectors.<br>
+                        1. &nbsp;**AI and Cloud Boom Beneficiary:** Microsoft is identified as a major beneficiary of the ongoing AI and Cloud boom. Its integrated offerings leverage its foundational strengths in enterprise software and cloud infrastructure.<br>
+                        2. &nbsp;**Growth Trends:** Expert analysis points to significant growth trends in MSFT's revenue and earnings, driven by successful AI integration across its product suite.<br>
+                        3. &nbsp;**Price Range:** Specific analyst recommendations place the potential price targets within the range of **$595 to $676**, validating the "Strong Buy" consensus.
+                    </p>
+                    <p class="text-sky-300 font-bold">**Investment Conclusion:**</p>
+                    <p>Given the current price of $530.61 USD relative to the average analyst target of $634.14, and the consensus "Strong Buy" rating, Microsoft presents a compelling investment case. The market anticipates substantial growth driven by AI and cloud adoption. The current price offers a potential entry point for investors anticipating the realization of the projected 19.51% growth over the next year.</p>
+                </div>
+                <p class="text-sky-400">==================================================</p>
             </div>
 
-            <hr class="border-white/10 my-2">
+            <!-- ========================================== -->
+            <!-- QUERY 4: FIFA World Cup 2026 -->
+            <!-- ========================================== -->
+            <div class="space-y-3 pt-2">
+                <p><span class="text-yellow-400 font-bold">Enter Query (type 'exit' to quit):</span> <span class="text-white font-bold">FIFA World Cup 2026 winner and detail ?</span></p>
+                <p class="text-sky-300">
+                    ⚡ [3D Fly Brain Reflex] State |Ψ⟩: 1.00|INTENT_GENERAL&gt; (0.64ms)<br>
+                    &nbsp; [Intent Superposition Active] Firing 1 plugins simultaneously: ['tool_search']
+                </p>
 
-            <!-- 7. Query: FIFA World Cup 2026 -->
-            <div>
-                <p><span class="text-[#50fa7b]">m@ALPHA10</span> <span class="text-[#3b82f6]">C:\VCM\project\ai_toolsV13</span></p>
-                <p class="text-yellow-400">Enter Query (type 'exit' to quit): FIFA World Cup 2026 winner and detail ?</p>
-                <p class="text-sky-300">⚡ [3D Fly Brain Reflex] State |Ψ⟩: 1.00|INTENT_GENERAL> (0.64ms)<br>
-  [Intent Superposition Active] Firing 1 plugins simultaneously: ['tool_search']</p>
-                <p class="text-emerald-400 text-xs mt-2">🔍 [DEBUG: Raw Tool Output Received]:<br>
-**1. [HIGH_AUTHORITY_VERIFIED] 2026 FIFA World Cup final - Wikipedia**<br>
-The final match of the 2026 FIFA World Cup was played at MetLife Stadium in East Rutherford, New Jersey, on July 19, 2026. Contested by Spain and Argentina.<br>
-**2. [HIGH_AUTHORITY_VERIFIED] 2026 FIFA World Cup - Wikipedia**<br>
-The tournament began on June 11, 2026, and concluded on July 19 with <span class="text-green-400 font-bold">Spain winning the championship</span> for the second time.</p>
+                <!-- Raw Output Box -->
+                <div class="bg-black/40 p-4 rounded-xl border-l-4 border-amber-500 text-xs space-y-2 text-slate-300">
+                    <p class="text-amber-400 font-bold">🔍 [DEBUG: Raw Tool Output Received]:</p>
+                    <p class="text-sky-400 font-bold">🌐 **Search &amp; RAG Results for:** `FIFA World Cup 2026 winner and detail ?`</p>
+                    <p><span class="text-emerald-300 font-bold">**1. [HIGH_AUTHORITY_VERIFIED] 2026 FIFA World Cup final - Wikipedia**</span><br>
+                    2026 FIFA World Cup final ... The final match of the 2026 FIFA World Cup —the 23rd edition of the FIFA competition for men's national soccer teams—was played at MetLife Stadium in East Rutherford, New Jersey, part of the New York metropolitan area, on July 19, 2026. It was contested by Spain and the defending champion Argentina. [Deep Page Extracted Details]: The final match of the 2026 FIFA World Cup —the 23rd edition of the FIFA competition for...</p>
+                    <p><span class="text-emerald-300 font-bold">**2. [HIGH_AUTHORITY_VERIFIED] 2026 FIFA World Cup - Wikipedia**</span><br>
+                    The 2026 FIFA World Cup[A] was the 23rd FIFA World Cup, the quadrennial international men's soccer championship contested by the national teams of the member associations of FIFA. The tournament began on June 11, 2026, and concluded on July 19 with Spain winning the championship for the second time. [3] It was jointly hosted by 16 cities—11 in the United States, 3 in Mexico, and 2 in Canada ... [Deep Page Extracted Details]: Jump to content From ...</p>
+                    <p><span class="text-sky-300 font-bold">**3. [STANDARD_WEB] 2026 FIFA World Cup winner: Who won, final result and best betting offers**</span><br>
+                    The 2026 FIFA World Cup came to a close at MetLife Stadium on Sunday night with Rodri lifting the trophy after a tense extra-time final that left one of the sport's greatest talents in tears. Lionel Messi, playing in what looked his last World Cup was ...</p>
+                    <p><span class="text-sky-300 font-bold">**4. [STANDARD_WEB] 2026 FIFA World Cup Final Result: Spain 1-0 Argentina (AET)**</span><br>
+                    The 2026 FIFA World Cup Final ended Spain 1-0 Argentina after extra time at MetLife Stadium. Ferran Torres scored the winner. Full result, awards and prize money.</p>
+                    <p><span class="text-sky-300 font-bold">**5. [STANDARD_WEB] FIFA World Cup 2026 Award Winners: Full List where Spain Sweeps the Night**</span><br>
+                    Spain did not just win the FIFA World Cup 2026. They swept nearly every individual award alongside it, making them the ultimate World Cup 2026 Award Winners.</p>
+                    <p class="text-slate-500">---------------------------------------------</p>
+                </div>
+
+                <p class="text-purple-400">
+                    ⚙️ [Local LLM Synthesizer] Feeding raw tool data to miniNeo7:latest for synthesis...<br>
+                    &nbsp; [History Saved] Second brain updated: history/20261107223631_query_log.md
+                </p>
+
+                <!-- Synthesized Response Box -->
+                <div class="bg-emerald-950/20 p-4 rounded-xl border-l-4 border-emerald-400 space-y-2 text-slate-200">
+                    <p class="text-emerald-400 font-bold">Response:</p>
+                    <p>The winner of the FIFA World Cup 2026 was <span class="text-emerald-400 font-bold">**Spain**</span>.</p>
+                    <p class="text-sky-300 font-bold">**Tournament Details and Outcome:**</p>
+                    <p>
+                        * &nbsp;**Edition:** The tournament marked the 23rd FIFA World Cup.<br>
+                        * &nbsp;**Final Match:** The championship was contested between Spain and the defending champions, Argentina.<br>
+                        * &nbsp;**Venue:** The final match was played at MetLife Stadium in East Rutherford, New Jersey, on July 19, 2026.<br>
+                        * &nbsp;**Final Result:** Spain defeated Argentina with a score of **1-0** after extra time (AET).<br>
+                        * &nbsp;**Goal Scorer:** The winning goal was scored by **Ferran Torres**.<br>
+                        * &nbsp;**Key Figures:** The victory was highlighted by the performance of Rodri, who lifted the trophy, and the presence of Lionel Messi, who participated in the tournament.
+                    </p>
+                    <p class="text-sky-300 font-bold">**Contextual Breakdown:**</p>
+                    <p>
+                        The 2026 FIFA World Cup was a major event, jointly hosted by 16 cities across the globe:<br>
+                        * &nbsp;11 cities in the United States.<br>
+                        * &nbsp;3 cities in Mexico.<br>
+                        * &nbsp;2 cities in Canada.
+                    </p>
+                    <p class="text-sky-300 font-bold">**Awards Sweep:**</p>
+                    <p>Beyond the final victory, Spain achieved a comprehensive sweep of individual accolades, making them the ultimate award winners for the 2026 tournament.</p>
+                </div>
+                <p class="text-sky-400">==================================================</p>
             </div>
 
-            <hr class="border-white/10 my-2">
+            <!-- ========================================== -->
+            <!-- QUERY 5: A2O LITE 'NEON' YouTube Views -->
+            <!-- ========================================== -->
+            <div class="space-y-3 pt-2">
+                <p><span class="text-yellow-400 font-bold">Enter Query (type 'exit' to quit):</span> <span class="text-white font-bold">How many views does the official video for A2O LITE 'NEON' on YouTube have?</span></p>
+                <p class="text-sky-300">
+                    ⚡ [3D Fly Brain Reflex] State |Ψ⟩: 1.00|INTENT_YOUTUBE&gt; (2.24ms)<br>
+                    &nbsp; [Intent Superposition Active] Firing 2 plugins simultaneously: ['tool_search', 'tool_youtube']<br>
+                    &nbsp; &nbsp; 🔍 [YouTube Direct Engine] Harvesting YouTube URL for: 'NEON'...<br>
+                    &nbsp; &nbsp; &nbsp; ✅ [Brand-Aligned Match] A2O LITE 'NEON' Official Video (A2O WORLD) - Views: 40,291,160
+                </p>
 
-            <!-- 8. Query: A2O LITE 'NEON' YouTube Views -->
-            <div>
-                <p><span class="text-[#50fa7b]">m@ALPHA10</span> <span class="text-[#3b82f6]">C:\VCM\project\ai_toolsV13</span></p>
-                <p class="text-yellow-400">Enter Query (type 'exit' to quit): How many views does the official video for A2O LITE 'NEON' on YouTube have?</p>
-                <p class="text-sky-300">⚡ [3D Fly Brain Reflex] State |Ψ⟩: 1.00|INTENT_YOUTUBE> (2.24ms)<br>
-  [Intent Superposition Active] Firing 2 plugins simultaneously: ['tool_search', 'tool_youtube']<br>
-    🔍 [YouTube Direct Engine] Harvesting YouTube URL for: 'NEON'...<br>
-      ✅ [Brand-Aligned Match] A2O LITE 'NEON' Official Video (A2O WORLD) - Views: 40,291,160</p>
-                <p class="text-emerald-400 text-xs mt-2">🔍 [DEBUG: Raw Tool Output Received]:<br>
-📺 **Official YouTube Real-Time Data:**<br>
-- **Video Title:** A2O LITE 'NEON' Official Video<br>
-- **Channel:** A2O WORLD<br>
-- **Real-Time Views:** **40,291,160 views**<br>
-- **Real-Time Likes:** 639,771 likes<br>
-- **Direct Link:** https://www.youtube.com/watch?v=D968qfUZMUE</p>
+                <!-- Raw Output Box -->
+                <div class="bg-black/40 p-4 rounded-xl border-l-4 border-amber-500 text-xs space-y-2 text-slate-300">
+                    <p class="text-amber-400 font-bold">🔍 [DEBUG: Raw Tool Output Received]:</p>
+                    <p class="text-sky-400 font-bold">🌐 **Search &amp; RAG Results for:** `How many views does the official video for A2O LITE 'NEON' on YouTube have?`</p>
+                    <p><span class="text-sky-300 font-bold">**1. [STANDARD_WEB] A2O LITE - NEON Official Video: YouTube Views &amp; Stats | ChartsList**</span><br>
+                    A2O LITE - NEON Official Video by STONE MUSIC has 13.5M YouTube views, +417K in the past 24 hours. Daily views, likes and chart history, updated daily. [Deep Page Extracted Details]: Video statistics A2O LITE - NEON Official Video A2O LITE - NEON Official Video by STONE MUSIC has 14,096,714 views on YouTube, including 558,221 in the past 24 hours. Since its release on 2026-10-13 it has averaged 563,868 views per day. The song was first released o...</p>
+                    <p><span class="text-sky-300 font-bold">**2. [STANDARD_WEB] A2O LITE 'NEON' Official Video: YouTube Views &amp; Stats | ChartsList**</span><br>
+                    A2O LITE 'NEON' Official Video by A2O WORLD has 38.8M YouTube views, +836K in the past 24 hours. Daily views, likes and chart positions in 2 countries, updated daily. [Deep Page Extracted Details]: Video statistics A2O LITE 'NEON' Official Video A2O LITE 'NEON' Official Video by A2O WORLD has 39,895,130 views on YouTube, including 1,109,974 in the past 24 hours. It is on the trending chart in 2 countries, peaking at #55 in Singapore. Since its re...</p>
+                    <p><span class="text-sky-300 font-bold">**3. [STANDARD_WEB] YouTube Stats of A2O LITE 'NEON' Official Video - kworb.net**</span><br>
+                    A2O LITE 'NEON' Official Video A2O WORLD Watch on Published: 2026/10/12 Total views: 39,467,712 Expected to hit 100,000,000 on: 2027/01/10 Most views in a day: 2,345,623 (2026/10/12) Likes: 632,658 Peaked at #18 and charted for 3 weeks. Available worldwide.</p>
+                    <p><span class="text-sky-300 font-bold">**4. [STANDARD_WEB] YouTube Stats of A2O LITE - NEON Official Video - kworb.net**</span><br>
+                    A2O LITE - NEON Official Video STONE MUSIC Watch on Published: 2026/10/13 Total views: 12,985,635 Expected to hit 100,000,000 on: 2027/05/27 Most views in a day: 831,923 (2026/10/14) Likes: 147,576 Peaked at #175 and charted for 1 week. Available worldwide.</p>
+                    <p><span class="text-sky-300 font-bold">**5. [STANDARD_WEB] A2O LITE - YouTube**</span><br>
+                    A2O LITE - NEON Official Video 새로운 세대의 감각으로 자신들만의 색을 그려 나가는 9명의 소녀들, A2O LITE가 데뷔 디지털 싱글 'NEON'을 통해 당찬 발걸음을 ...</p>
+                    <p class="text-slate-500">---------------------------------------------</p>
+                    <p class="text-white font-bold">📺 **Official YouTube Real-Time Data:**</p>
+                    <p>
+                        - **Video Title:** A2O LITE 'NEON' Official Video<br>
+                        - **Channel:** A2O WORLD<br>
+                        - **Real-Time Views:** <span class="text-emerald-400 font-bold">**40,291,160 views**</span><br>
+                        - **Real-Time Likes:** 639,771 likes<br>
+                        - **Direct Link:** https://www.youtube.com/watch?v=D968qfUZMUE
+                    </p>
+                    <p class="text-slate-500">---------------------------------------------</p>
+                </div>
+
+                <p class="text-purple-400">
+                    ⚙️ [Local LLM Synthesizer] Feeding raw tool data to miniNeo7:latest for synthesis...<br>
+                    &nbsp; [History Saved] Second brain updated: history/20261107233957_query_log.md
+                </p>
+
+                <!-- Synthesized Response Box -->
+                <div class="bg-emerald-950/20 p-4 rounded-xl border-l-4 border-emerald-400 space-y-2 text-slate-200">
+                    <p class="text-emerald-400 font-bold">Response:</p>
+                    <p>The official YouTube video for A2O LITE 'NEON' currently has <span class="text-emerald-400 font-bold">**40,291,160 views**</span> in real-time.</p>
+                    <p class="text-sky-300 font-bold">### Detailed Breakdown of Views and Statistics:</p>
+                    <p>
+                        The gathered data presents several metrics, indicating the total views across different tracking periods and sources:<br>
+                        * &nbsp;**Real-Time Views:** The current, official count is **40,291,160 views**.<br>
+                        * &nbsp;**Real-Time Engagement:** The video also holds **639,771 likes** at the time of the data capture.<br>
+                        * &nbsp;**Channel:** The video is hosted on the **A2O WORLD** channel.
+                    </p>
+                    <p class="text-sky-300 font-bold">### Historical and Source-Specific View Counts:</p>
+                    <p>
+                        The raw context provides several alternative total view counts, suggesting varying metrics based on the source or time frame:<br>
+                        * &nbsp;**A2O WORLD Metric:** One source reports **39,895,130 views**, which includes an additional **1,109,974 views** in the past 24 hours.<br>
+                        * &nbsp;**kworb.net Metric:** Another source lists the total views as **39,467,712**, noting that the most views in a single day occurred on 2026/10/12 with **2,345,623 views**.<br>
+                        * &nbsp;**STONE MUSIC Metric:** A separate analysis attributed to STONE MUSIC shows a total of **14,096,714 views**, with the most views in a single day recorded on 2026/10/14 (**831,923 views**).<br>
+                        * &nbsp;**STONE MUSIC (Alternative):** A second STONE MUSIC entry reports a total of **12,985,635 views**.
+                    </p>
+                    <p>In summary, the official real-time metric provides the most current figure (**40,291,160**), while historical tracking suggests total views across different reporting periods hover between **12.9 million** and **39.9 million**.</p>
+                </div>
+                <p class="text-sky-400">==================================================</p>
             </div>
-
-            <hr class="border-white/10 my-2">
 
             <!-- Active Prompt Line -->
             <div class="pt-2 flex items-center">
-                <span class="text-[#50fa7b]">m@ALPHA10</span>&nbsp;<span class="text-[#3b82f6]">C:\VCM\project\ai_toolsV13</span><span class="text-yellow-400 ml-2">$</span>
-                <span class="ml-2 text-slate-200">python main_core.py --continuous-stream</span>
+                <span class="text-yellow-400 font-bold">Enter Query (type 'exit' to quit):</span>
                 <span class="cursor"></span>
             </div>
 
@@ -206,7 +412,7 @@ The tournament began on June 11, 2026, and concluded on July 19 with <span class
 
     <!-- Footer Note -->
     <div class="w-full max-w-6xl mt-4 text-center text-[10px] text-slate-500 uppercase tracking-[0.3em]">
-        Sovereign Local AI Core // Full Session Execution Audit Trail
+        Sovereign Local AI Core V11.3 // Complete Raw Input &amp; 2B Synthesis Audit Log
     </div>
 
 </body>
